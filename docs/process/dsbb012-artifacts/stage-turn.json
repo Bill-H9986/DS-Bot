@@ -1,0 +1,54 @@
+{
+  "stage": "turn",
+  "startedAt": "2026-11-19T11:34:59.180Z",
+  "newEvents": [
+    {
+      "seq": 31,
+      "type": "agent/inbox/spliced"
+    },
+    {
+      "seq": 32,
+      "type": "turn/start"
+    },
+    {
+      "seq": 33,
+      "type": "agent/inbox/spliced"
+    },
+    {
+      "seq": 34,
+      "type": "step/start"
+    },
+    {
+      "seq": 35,
+      "type": "user/message",
+      "content": "[{\"type\":\"text\",\"text\":\"ping after the remap\"}]"
+    },
+    {
+      "seq": 36,
+      "type": "user/message",
+      "content": "[{\"type\":\"text\",\"text\":\"Current runtime context. This snapshot supersedes earlier runtime-context snapshots.\\n\\nCurrent working directory: \\\"C:\\\\\\\\Users\\\\\\\\24268\\\\\\\\Desktop\\\\\\\\Development\\\\\\\\DS-Bot-Base\\\\\\\\.claude\\\\\\\\worktrees\\\\\\\\fervent-darwin-188c56\\\\\\\\.dsh-test-dsbb012\\\\\\\\workspaces\\\\\\\\new-team-ws\\\".\\n\\nCurrent DSH file policy: workspace-write. Any available operation enforced by the DSH file s"
+    },
+    {
+      "seq": 37,
+      "type": "request/header"
+    },
+    {
+      "seq": 38,
+      "type": "assistant/message",
+      "reply": "[{\"type\":\"text\",\"text\":\"收到：ping after the remap\\nCurrent runtime context. This snapshot \"},{\"type\":\"text\",\"text\":\"还有别的要我盯的吗？\"}]"
+    },
+    {
+      "seq": 39,
+      "type": "step/end"
+    },
+    {
+      "seq": 40,
+      "type": "turn/end",
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  ],
+  "mockRequestsDuringTurn": 1,
+  "finishedAt": "2026-11-19T11:35:00.247Z"
+}

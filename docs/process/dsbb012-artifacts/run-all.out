@@ -1,0 +1,9 @@
+[012] 012-A setup done: home=C:\Users\24268\Desktop\Development\DS-Bot-Base\.claude\worktrees\fervent-darwin-188c56\.dsh-test-dsbb012\dsh-home old=C:\Users\24268\Desktop\Development\DS-Bot-Base\.claude\worktrees\fervent-darwin-188c56\.dsh-test-dsbb012\workspaces\old-team-ws new=C:\Users\24268\Desktop\Development\DS-Bot-Base\.claude\worktrees\fervent-darwin-188c56\.dsh-test-dsbb012\workspaces\new-team-ws mock=127.0.0.1:51658 pid=19408
+[012] stage create: exit 0 — ok
+[012] stage reproduce: exit 0 — ok
+[012] stage remap: exit 0 — ok
+[012] stage verify: exit 0 — ok
+[012] stage turn: exit 0 — ok
+[012] stage idempotent: exit 0 — ok
+[012] finish: port no longer answering — mock released
+[012] all requested stages completed

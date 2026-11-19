@@ -1,0 +1,52 @@
+{
+  "remapStage": {
+    "stage": "remap",
+    "startedAt": "2026-11-19T11:34:47.752Z",
+    "getcwdBefore": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\workspaces\\old-team-ws",
+    "setCallsMade": 1,
+    "remappedTo": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\workspaces\\new-team-ws",
+    "getcwdAfter": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\workspaces\\new-team-ws",
+    "changeEvents": [],
+    "noticeEvents": [],
+    "eventTypes": {
+      "permission/preset": 1,
+      "sandbox/mode": 1,
+      "approval/policy": 1,
+      "agent/inbox/spliced": 4,
+      "turn/start": 2,
+      "step/start": 1,
+      "system/message": 1,
+      "user/message": 5,
+      "request/header": 1,
+      "request/context": 1,
+      "session/title": 2,
+      "session/title-llm-request": 1,
+      "assistant/message": 1,
+      "step/end": 1,
+      "turn/end": 2,
+      "session/end-seed": 2
+    },
+    "finishedAt": "2026-11-19T11:34:48.661Z"
+  },
+  "comparison": {
+    "beforeSize": 20332,
+    "afterSize": 21387,
+    "appendOnlyPrefix": {
+      "appendOnly": true,
+      "identicalPrefix": true,
+      "appendedBytes": 1055
+    },
+    "frameCountBefore": 5,
+    "frameCountAfter": 9,
+    "appendedFrameCount": 4,
+    "originalFramesIdentical": true,
+    "mismatchedFrames": [],
+    "wholeFileHashChanged": true,
+    "mtimeBefore": 1795087897753,
+    "mtimeAfter": 1795088088687,
+    "mtimeUnchanged": false,
+    "beforeWholeSha": "466d001380fc8e9c4b2ea166de4700cb17239219e3a62b519767885616cd99c8",
+    "afterWholeSha": "bd22097df38be8a3e8932a2ad457f31e579b12ec9d0b222407907921637b4750"
+  },
+  "note": "The R-remap (and the failed 012-C turn before it) appends new zstd frames; the whole-file hash changes by design. The 012-B original frames must be byte-identical, and the pristine byte prefix must be unchanged."
+}

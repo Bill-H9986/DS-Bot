@@ -1,0 +1,42 @@
+{
+  "stage": "create",
+  "startedAt": "2026-11-19T11:31:36.566Z",
+  "createdSessionId": "dsbb012-session-001",
+  "eventTypes": {
+    "permission/preset": 1,
+    "sandbox/mode": 1,
+    "approval/policy": 1,
+    "agent/inbox/spliced": 2,
+    "turn/start": 1,
+    "step/start": 1,
+    "system/message": 1,
+    "user/message": 5,
+    "request/header": 1,
+    "request/context": 1,
+    "session/title": 2,
+    "session/title-llm-request": 1,
+    "assistant/message": 1,
+    "step/end": 1,
+    "turn/end": 1
+  },
+  "eventCount": 21,
+  "initialTurnEnd": {
+    "turn": 1,
+    "reason": {
+      "kind": "completed"
+    }
+  },
+  "mockRequestLines": 2,
+  "artifactLocation": {
+    "kind": "jsonl",
+    "path": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\dsh-home\\sessions\\--C-Users-24268-Desktop-Development-DS-Bot-Base-.claude-worktrees-fervent-darwin-188c56-.dsh-test-dsbb012-workspaces-old-team-ws--\\dsbb012-session-001\\session.v4.jsonl.zstd"
+  },
+  "finishedAt": "2026-11-19T11:31:37.767Z",
+  "artifactPath": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\dsh-home\\sessions\\--C-Users-24268-Desktop-Development-DS-Bot-Base-.claude-worktrees-fervent-darwin-188c56-.dsh-test-dsbb012-workspaces-old-team-ws--\\dsbb012-session-001\\session.v4.jsonl.zstd",
+  "integrityBefore": {
+    "file": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\dsh-home\\sessions\\--C-Users-24268-Desktop-Development-DS-Bot-Base-.claude-worktrees-fervent-darwin-188c56-.dsh-test-dsbb012-workspaces-old-team-ws--\\dsbb012-session-001\\session.v4.jsonl.zstd",
+    "sha256Whole": "466d001380fc8e9c4b2ea166de4700cb17239219e3a62b519767885616cd99c8",
+    "sizeBytes": 20332,
+    "frameCount": 5
+  }
+}

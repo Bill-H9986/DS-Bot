@@ -1,0 +1,7 @@
+# DS-BB-012 stage turn — started 2026-11-19T11:34:54.690Z
+# env: DSH_HOME=C:\Users\24268\Desktop\Development\DS-Bot-Base\.claude\worktrees\fervent-darwin-188c56\.dsh-test-dsbb012\dsh-home DEEPSEEK_BASE_URL=http://127.0.0.1:51658/v1
+
+dsh web: http://127.0.0.1:55949/?token=GsZ5DU_H8wx4kkSrizQe-Akx09LCNajQPpNAXL58rK4
+[dsbb012:turn] engine booted
+[dsbb012:turn] stage turn wrote C:\Users\24268\Desktop\Development\DS-Bot-Base\.claude\worktrees\fervent-darwin-188c56\docs\process\dsbb012-artifacts\stage-turn.json
+[dsbb012:turn] engine shut down cleanly

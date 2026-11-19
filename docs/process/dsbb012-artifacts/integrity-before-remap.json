@@ -1,0 +1,46 @@
+{
+  "capturedAt": "2026-11-19T11:33:07.344Z",
+  "file": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\dsh-home\\sessions\\--C-Users-24268-Desktop-Development-DS-Bot-Base-.claude-worktrees-fervent-darwin-188c56-.dsh-test-dsbb012-workspaces-old-team-ws--\\dsbb012-session-001\\session.v4.jsonl.zstd",
+  "path": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\dsh-home\\sessions\\--C-Users-24268-Desktop-Development-DS-Bot-Base-.claude-worktrees-fervent-darwin-188c56-.dsh-test-dsbb012-workspaces-old-team-ws--\\dsbb012-session-001\\session.v4.jsonl.zstd",
+  "sizeBytes": 20332,
+  "sha256Whole": "466d001380fc8e9c4b2ea166de4700cb17239219e3a62b519767885616cd99c8",
+  "mtimeMs": 1795087897753,
+  "frameCount": 5,
+  "frames": [
+    {
+      "start": 0,
+      "end": 241,
+      "bytes": 241,
+      "sha256Raw": "5f686ba51b04ea9a816af230e3582e64625d5745c7211e09155aa8d74cfd6bef",
+      "sha256Decoded": "ca8ef9374d63cf8c9277bfc4f4f3eb0c5f065ca0670a8e252321c09366ef3181"
+    },
+    {
+      "start": 241,
+      "end": 583,
+      "bytes": 342,
+      "sha256Raw": "dc268aa664731c746f4a1e55e492bff95cc7cf025500a2f65f052deeff90abed",
+      "sha256Decoded": "62aab26d0f9fdd6ef9666217e4d504f84de4b54e8d458ce28daaad4826e0bf61"
+    },
+    {
+      "start": 583,
+      "end": 18893,
+      "bytes": 18310,
+      "sha256Raw": "ce9462eaf8bd1803d66d07342c3d5fa8b71dc4204d0e7dc272853fbae1676813",
+      "sha256Decoded": "2fbcda1af2c212c664d504be356f36d4eef5f1f19a28c046a899d1b2a23d4f3d"
+    },
+    {
+      "start": 18893,
+      "end": 19576,
+      "bytes": 683,
+      "sha256Raw": "820b51464be1e3b9f91ac573a0a2d694b7d1e267efddf95e3882f7e9a11d94a4",
+      "sha256Decoded": "5827e8b817ff857876a7e331530e80038a74f12c682a36dde99f15d024b6670d"
+    },
+    {
+      "start": 19576,
+      "end": 20332,
+      "bytes": 756,
+      "sha256Raw": "846d659675556a61996d367b223e3a165f5f6fd80fa02fcba0a0b1600967000a",
+      "sha256Decoded": "f8d5fa0969e299bbb67d8b0d0ffa131408005ac07a97651d5887643ffcf1dee5"
+    }
+  ]
+}

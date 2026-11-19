@@ -1,0 +1,42 @@
+{
+  "stage": "idempotent",
+  "startedAt": "2026-11-19T11:36:34.696Z",
+  "getcwd": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\workspaces\\new-team-ws",
+  "setCallsMade": 0,
+  "changeEventCount": 1,
+  "controlTurnEnd": {
+    "turn": 1,
+    "reason": {
+      "kind": "completed"
+    }
+  },
+  "controlEventTypes": {
+    "permission/preset": 1,
+    "sandbox/mode": 1,
+    "approval/policy": 1,
+    "agent/inbox/spliced": 2,
+    "turn/start": 1,
+    "step/start": 1,
+    "system/message": 1,
+    "user/message": 5,
+    "request/header": 1,
+    "request/context": 1,
+    "session/title": 2,
+    "session/title-llm-request": 1,
+    "assistant/message": 1,
+    "step/end": 1,
+    "turn/end": 1
+  },
+  "finishedAt": "2026-11-19T11:36:36.167Z",
+  "integrity": {
+    "guardIsNoOp": true,
+    "noDuplicateChangeEvent": true,
+    "originalFramesIdentical": true,
+    "appendedFrameCount": 1,
+    "wholeFileHashChanged": true,
+    "preWholeSha": "2e304025581f6908a6f1e93462f235e4faa0e6d7bbe3feb52df21313d59019ef",
+    "postWholeSha": "0a2fbbf02a357ae29ee62b3b025fc5d342a6a7afc0a14d57b27cc57e51fa70e0",
+    "preFrameCount": 13,
+    "postFrameCount": 14
+  }
+}

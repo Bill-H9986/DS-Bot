@@ -1,0 +1,10 @@
+{
+  "stage": "verify",
+  "startedAt": "2026-11-19T11:34:53.612Z",
+  "discovered": true,
+  "listedSessionCount": 1,
+  "statFormatStatus": "current",
+  "getcwdAfterRestart": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\workspaces\\new-team-ws",
+  "ensureResult": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\workspaces\\new-team-ws",
+  "finishedAt": "2026-11-19T11:34:54.406Z"
+}

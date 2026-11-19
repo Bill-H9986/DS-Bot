@@ -1,0 +1,7 @@
+# DS-BB-012 stage remap — started 2026-11-19T11:34:42.961Z
+# env: DSH_HOME=C:\Users\24268\Desktop\Development\DS-Bot-Base\.claude\worktrees\fervent-darwin-188c56\.dsh-test-dsbb012\dsh-home DEEPSEEK_BASE_URL=http://127.0.0.1:51658/v1
+
+dsh web: http://127.0.0.1:55934/?token=aGWhsN_4TVkwYwyptB1yVm5QonrRfsbDozCGEatTZNM
+[dsbb012:remap] engine booted
+[dsbb012:remap] stage remap wrote C:\Users\24268\Desktop\Development\DS-Bot-Base\.claude\worktrees\fervent-darwin-188c56\docs\process\dsbb012-artifacts\stage-remap.json
+[dsbb012:remap] engine shut down cleanly

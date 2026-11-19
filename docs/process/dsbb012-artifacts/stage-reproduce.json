@@ -1,0 +1,24 @@
+{
+  "stage": "reproduce",
+  "startedAt": "2026-11-19T11:33:12.181Z",
+  "oldDirExists": false,
+  "listDiscovered": true,
+  "resumed": true,
+  "getcwd": "C:\\Users\\24268\\Desktop\\Development\\DS-Bot-Base\\.claude\\worktrees\\fervent-darwin-188c56\\.dsh-test-dsbb012\\workspaces\\old-team-ws",
+  "failingTurnEnd": {
+    "seq": 25,
+    "data": {
+      "turn": 2,
+      "reason": {
+        "kind": "error",
+        "error": {
+          "message": "working-directory: directory does not exist: \"C:\\\\Users\\\\24268\\\\Desktop\\\\Development\\\\DS-Bot-Base\\\\.claude\\\\worktrees\\\\fervent-darwin-188c56\\\\.dsh-test-dsbb012\\\\workspaces\\\\old-team-ws\"",
+          "code": "UNKNOWN"
+        }
+      }
+    }
+  },
+  "mockRequestsDuringTurn": 0,
+  "eventCountAfter": 26,
+  "finishedAt": "2026-11-19T11:33:12.941Z"
+}
