@@ -1,0 +1,13 @@
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 111 ms
+DS Bot: start window: the start page painted 171 ms after launch
+DS Bot: start window: first start window shown (a dialog) 181 ms after launch
+✔ quitting during the copy stops it, then quits, and leaves no team behind (167.0294ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3101.0147

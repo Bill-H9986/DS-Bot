@@ -1,0 +1,154 @@
+
+> dsbot-base@0.3.8 build
+> vite build
+
+[36mvite v8.3.4 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 785 modules transformed.
+rendering chunks...
+computing gzip size...
+ui/dist/index.html                                           0.55 kB │ gzip:   0.35 kB
+ui/dist/assets/KaTeX_Size3-Regular-CTq5MqoE.woff             4.42 kB
+ui/dist/assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2            4.92 kB
+ui/dist/assets/KaTeX_Size2-Regular-Dy4dx90m.woff2            5.20 kB
+ui/dist/assets/KaTeX_Size1-Regular-mCD8mA8B.woff2            5.46 kB
+ui/dist/assets/KaTeX_Size4-Regular-BF-4gkZK.woff             5.98 kB
+ui/dist/assets/KaTeX_Size2-Regular-oD1tc_U0.woff             6.18 kB
+ui/dist/assets/KaTeX_Size1-Regular-C195tn64.woff             6.49 kB
+ui/dist/assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2      6.90 kB
+ui/dist/assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2         6.91 kB
+ui/dist/assets/KaTeX_Size3-Regular-DgpXs0kz.ttf              7.58 kB
+ui/dist/assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff       7.65 kB
+ui/dist/assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff          7.71 kB
+ui/dist/assets/KaTeX_Script-Regular-D3wIWfF6.woff2           9.64 kB
+ui/dist/assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2       10.34 kB
+ui/dist/assets/KaTeX_Size4-Regular-DWFBv043.ttf             10.36 kB
+ui/dist/assets/KaTeX_Script-Regular-D5yQViql.woff           10.58 kB
+ui/dist/assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2         11.31 kB
+ui/dist/assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2            11.34 kB
+ui/dist/assets/KaTeX_Size2-Regular-B7gKUWhC.ttf             11.50 kB
+ui/dist/assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2        12.02 kB
+ui/dist/assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2          12.21 kB
+ui/dist/assets/KaTeX_Size1-Regular-Dbsnue_I.ttf             12.22 kB
+ui/dist/assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff        12.31 kB
+ui/dist/assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf       12.34 kB
+ui/dist/assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf          12.36 kB
+ui/dist/assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff          13.20 kB
+ui/dist/assets/KaTeX_Fraktur-Bold-BsDP51OF.woff             13.29 kB
+ui/dist/assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2      13.56 kB
+ui/dist/assets/KaTeX_SansSerif-Italic-DN2j7dab.woff         14.11 kB
+ui/dist/assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff           14.40 kB
+ui/dist/assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff       16.02 kB
+ui/dist/assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2         16.40 kB
+ui/dist/assets/KaTeX_Math-Italic-t53AETM-.woff2             16.44 kB
+ui/dist/assets/KaTeX_Script-Regular-C5JkGWo-.ttf            16.64 kB
+ui/dist/assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2         16.78 kB
+ui/dist/assets/KaTeX_Main-Italic-NWA7e6Wa.woff2             16.98 kB
+ui/dist/assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff          18.66 kB
+ui/dist/assets/KaTeX_Math-Italic-DA0__PXp.woff              18.74 kB
+ui/dist/assets/KaTeX_Main-BoldItalic-SpSLRI95.woff          19.41 kB
+ui/dist/assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf         19.43 kB
+ui/dist/assets/KaTeX_Fraktur-Regular-CB_wures.ttf           19.57 kB
+ui/dist/assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf              19.58 kB
+ui/dist/assets/KaTeX_Main-Italic-BMLOBm91.woff              19.67 kB
+ui/dist/assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf          22.36 kB
+ui/dist/assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf            24.50 kB
+ui/dist/assets/KaTeX_Main-Bold-Cx986IdX.woff2               25.32 kB
+ui/dist/assets/KaTeX_Main-Regular-B22Nviop.woff2            26.27 kB
+ui/dist/assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf        27.55 kB
+ui/dist/assets/KaTeX_AMS-Regular-BQhdFMY1.woff2             28.07 kB
+ui/dist/assets/KaTeX_Main-Bold-Jm3AIy58.woff                29.91 kB
+ui/dist/assets/KaTeX_Main-Regular-Dr94JaBh.woff             30.77 kB
+ui/dist/assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf           31.19 kB
+ui/dist/assets/KaTeX_Math-Italic-flOr_0UB.ttf               31.30 kB
+ui/dist/assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf           32.96 kB
+ui/dist/assets/KaTeX_AMS-Regular-DMm9YOAa.woff              33.51 kB
+ui/dist/assets/KaTeX_Main-Italic-3WenGoN9.ttf               33.58 kB
+ui/dist/assets/KaTeX_Main-Bold-waoOVXN0.ttf                 51.33 kB
+ui/dist/assets/KaTeX_Main-Regular-ypZvNtVU.ttf              53.58 kB
+ui/dist/assets/KaTeX_AMS-Regular-DRggAlZN.ttf               63.63 kB
+ui/dist/assets/index-C_MRCEJl.css                           68.51 kB │ gzip:  16.76 kB
+ui/dist/assets/html-derivative-CYiGA42P.js                   0.83 kB │ gzip:   0.45 kB
+ui/dist/assets/csv-Dx-8-gkx.js                               1.13 kB │ gzip:   0.36 kB
+ui/dist/assets/ini-B5eOa1yu.js                               1.51 kB │ gzip:   0.49 kB
+ui/dist/assets/dotenv-CuH5my32.js                            1.74 kB │ gzip:   0.60 kB
+ui/dist/assets/diff-woXpYk--.js                              2.56 kB │ gzip:   0.68 kB
+ui/dist/assets/log-BNLmms1o.js                               2.84 kB │ gzip:   0.89 kB
+ui/dist/assets/http-C8rF2SzT.js                              4.37 kB │ gzip:   1.04 kB
+ui/dist/assets/bibtex-Ci_nEsc7.js                            4.78 kB │ gzip:   0.83 kB
+ui/dist/assets/xml-JdeZG7r7.js                               5.43 kB │ gzip:   1.24 kB
+ui/dist/assets/vb-DOwzaHZ0.js                                6.06 kB │ gzip:   2.32 kB
+ui/dist/assets/verilog-B2gwz-sJ.js                           6.40 kB │ gzip:   1.92 kB
+ui/dist/assets/clojure-DqKBuwfJ.js                           6.40 kB │ gzip:   1.41 kB
+ui/dist/assets/toml-CcmNWLt0.js                              6.41 kB │ gzip:   1.28 kB
+ui/dist/assets/proto-DB4EqR-F.js                             6.54 kB │ gzip:   1.41 kB
+ui/dist/assets/r-BGDKDDDL.js                                 6.79 kB │ gzip:   1.88 kB
+ui/dist/assets/dart-CHZY9Xhz.js                              8.60 kB │ gzip:   1.99 kB
+ui/dist/assets/kotlin-DhhofPvG.js                            8.77 kB │ gzip:   2.12 kB
+ui/dist/assets/make-Dixweg8N.js                              8.95 kB │ gzip:   1.76 kB
+ui/dist/assets/cmake-Bj61d0ZC.js                             9.84 kB │ gzip:   3.37 kB
+ui/dist/assets/hcl-Dh228itO.js                              10.04 kB │ gzip:   1.93 kB
+ui/dist/assets/rst-BPuCB09D.js                              10.29 kB │ gzip:   2.25 kB
+ui/dist/assets/yaml-rwi0_p6S.js                             10.49 kB │ gzip:   2.26 kB
+ui/dist/assets/bat-qdxAdBWQ.js                              12.88 kB │ gzip:   3.23 kB
+ui/dist/assets/fish-BJitypiv.js                             13.03 kB │ gzip:   1.73 kB
+ui/dist/assets/rust-DpiIf5JO.js                             15.16 kB │ gzip:   2.72 kB
+ui/dist/assets/nix-IvuFDN5E.js                              15.50 kB │ gzip:   2.47 kB
+ui/dist/assets/lua-DT52CJW3.js                              15.58 kB │ gzip:   3.18 kB
+ui/dist/assets/elixir-mcNsvcxp.js                           16.26 kB │ gzip:   2.76 kB
+ui/dist/assets/groovy-CacY0gHj.js                           19.17 kB │ gzip:   3.59 kB
+ui/dist/assets/powershell-QtSnmXcu.js                       20.14 kB │ gzip:   4.05 kB
+ui/dist/assets/sql-Il3U3HyE.js                              23.72 kB │ gzip:   7.56 kB
+ui/dist/assets/svelte-B_3LM3kb.js                           24.60 kB │ gzip:   4.76 kB
+ui/dist/assets/vue-SQ9AI6Lz.js                              24.92 kB │ gzip:   3.02 kB
+ui/dist/assets/fsharp-D13ZGOAj.js                           25.30 kB │ gzip:   4.12 kB
+ui/dist/assets/system-verilog-Dh5ihWbf.js                   26.54 kB │ gzip:   4.85 kB
+ui/dist/assets/scss-CZwSmAzX.js                             27.20 kB │ gzip:   4.19 kB
+ui/dist/assets/java-0eLuq-yK.js                             27.27 kB │ gzip:   4.30 kB
+ui/dist/assets/scala-BiFt_7mu.js                            28.88 kB │ gzip:   3.93 kB
+ui/dist/assets/julia-CKyaRp-R.js                            31.22 kB │ gzip:   4.34 kB
+ui/dist/assets/erlang-Cphh6RMH.js                           37.47 kB │ gzip:   4.36 kB
+ui/dist/assets/haskell-D8IpX4py.js                          41.48 kB │ gzip:   6.41 kB
+ui/dist/assets/perl-BIJzXUDj.js                             43.14 kB │ gzip:   4.64 kB
+ui/dist/assets/go-rLFTqkRN.js                               46.81 kB │ gzip:   5.14 kB
+ui/dist/assets/css-ZG3FYYFP.js                              53.42 kB │ gzip:  12.52 kB
+ui/dist/assets/ruby-BURPYyz8.js                             54.74 kB │ gzip:   7.10 kB
+ui/dist/assets/html-Ca1J9ASQ.js                             57.31 kB │ gzip:  11.78 kB
+ui/dist/assets/markdown-BYOwaDjH.js                         59.32 kB │ gzip:   5.66 kB
+ui/dist/assets/python-gzcpVVnB.js                           69.94 kB │ gzip:   9.09 kB
+ui/dist/assets/c-CF7gAV4t.js                                72.16 kB │ gzip:  10.54 kB
+ui/dist/assets/latex-Bbt6x6hG.js                            82.85 kB │ gzip:   9.47 kB
+ui/dist/assets/swift-CyEgAFGc.js                            87.22 kB │ gzip:  14.79 kB
+ui/dist/assets/csharp-dmMxLVLW.js                           91.43 kB │ gzip:  10.79 kB
+ui/dist/assets/less-DVTAwKKz.js                             97.62 kB │ gzip:  14.84 kB
+ui/dist/assets/php-BVrECiiB.js                             113.12 kB │ gzip:  28.84 kB
+ui/dist/assets/asciidoc-SCjQUq34.js                        136.04 kB │ gzip:   9.45 kB
+ui/dist/assets/mdx-DQZ5AkYe.js                             136.10 kB │ gzip:  23.54 kB
+ui/dist/assets/javascript-BzbQS41l.js                      174.81 kB │ gzip:  16.62 kB
+ui/dist/assets/graphql-D3DT4ou_.js                         371.23 kB │ gzip:  34.72 kB
+ui/dist/assets/cpp-BziNXOeP.js                             796.96 kB │ gzip:  60.65 kB
+ui/dist/assets/index-DU-uDfdL.js                         3,245.72 kB │ gzip: 961.09 kB
+
+[33m[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 2048 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[33m[33m[IMPORT_IS_UNDEFINED] [0mImport `projectUserText` will always be undefined because there is no matching export in '../ds-bot/node_modules/@deepseek-ai/dsh-client-ui-primitives/lib/index.js'
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../ds-bot/src/client/user-message.js:25:25 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m25 │[0m [38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mj[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249my[0m[38;5;249mp[0m[38;5;249me[0m[38;5;249mo[0m[38;5;249mf[0m[38;5;249m [0mui.projectUserText[38;5;249m [0m[38;5;249m=[0m[38;5;249m=[0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249mf[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m'[0m
+ [38;5;240m   │[0m                         ─────────┬────────  
+ [38;5;240m   │[0m                                  ╰────────── 
+[38;5;246m────╯[0m
+[39m
+[33m[33m[IMPORT_IS_UNDEFINED] [0mImport `projectUserText` will always be undefined because there is no matching export in '../ds-bot/node_modules/@deepseek-ai/dsh-client-ui-primitives/lib/index.js'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../ds-bot/src/client/user-message.js:112:35 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m112 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m:[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249m([0m[38;5;249mF[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mk[0m[38;5;249me[0m[38;5;249my[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m,[0m[38;5;249m [0mui.projectUserText[38;5;249m([0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249mt[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249mL[0m[38;5;249ma[0m[38;5;249mb[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mk[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249mN[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249ms[0m[38;5;249mk[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249m'[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m)[0m[38;5;249m)[0m[38;5;249m)[0m[38;5;249m)[0m
+ [38;5;240m    │[0m                                   ─────────┬────────  
+ [38;5;240m    │[0m                                            ╰────────── 
+[38;5;246m─────╯[0m
+[39m
+[32m✓ built in 592ms[39m
+VITE_EXIT=0

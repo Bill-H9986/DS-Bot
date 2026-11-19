@@ -1,0 +1,24 @@
+✔ the model settings of DSH Desktop come first, then DSH Web, then the profile with most rows (1.2165ms)
+✔ the regenerable folders stay behind by default from 200 MB on, and the sizes follow the options (0.1768ms)
+✔ the time left is in whole minutes, moves a full minute at a time and never counts down to 0 (0.1096ms)
+✔ the import card says what it found, what the copy takes and which model settings go along (2.9856ms)
+✔ the card follows a changed model and options, and the copy takes them (1.0175ms)
+✔ sizes that took too long leave the numbers out of the card instead of guessing (0.5965ms)
+✔ a drive without room for the copy and 500 MB says how much is missing (0.5431ms)
+✔ 「换个位置…」 on the import card picks another place for the import (0.31ms)
+✔ a team that DSH holds waits on its card and the copy goes on by itself once DSH lets go (0.5127ms)
+✔ a holder that comes while the card checks the chats makes that check count for nothing (0.6101ms)
+✔ the copying card counts the checked chats, then the bytes, then starts the team (0.4424ms)
+✔ the check of the chats fills the import arc's first 15 %, the copy the rest (0.0961ms)
+✔ a quit during the copy stops it and leaves no team (0.5643ms)
+✔ chats newer than this DSH reads say so, and the start goes on without the team (0.3549ms)
+✔ a failed copy offers to try again, and the second copy can go through (0.395ms)
+✔ a quit or another start while a card waits ends the import without an answer (0.2891ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 155.7712

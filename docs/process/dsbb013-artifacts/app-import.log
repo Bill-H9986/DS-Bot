@@ -1,0 +1,159 @@
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-import-VZIzNq\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-import-VZIzNq\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-ePst4e\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ importTeam
+  ✔ copies the team without its lock, its turns in flight, its workspace, its old workspace id or Agents (1.2289ms)
+  ✔ copies every Session the team names into the same folder group, and only those (0.6322ms)
+  ✔ copies the own Session of every group, so an imported group can be opened (0.1603ms)
+  ✔ copies the attachments, the keys, and the model rows of the chosen profile (1.2857ms)
+  ✔ puts the old workspace files in the chosen folder without replacing one that is there (0.2963ms)
+  ✔ records the import, leaves nothing staged and changes nothing in the old home (3.0413ms)
+  ✔ does not replace a team that is there (1.2123ms)
+✔ importTeam (81.6398ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-ePst4e\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ a copy that stopped
+  ✔ a copy that stopped part way runs again (39.488ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-ePst4e\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ a stopped copy leaves no Bot team (1.862ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-ePst4e\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: the import kept the .credentials.yaml and .env that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-ePst4e\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ a quit during the move-in leaves no Bot team, and the next copy finishes (70.9046ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-T8qeTQ\host\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ a copy that failed part way removes what it staged and leaves no Bot team (25.9566ms)
+✔ a copy that stopped (155.5023ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-T8qeTQ\saved\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ keys the data location has already
+  ✔ copies the old keys over the .credentials.yaml that only the Host's first start wrote (46.4158ms)
+DS Bot: the import kept the .credentials.yaml that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-T8qeTQ\account\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ keeps a .credentials.yaml with a key saved since, copies the rest and reports which it kept (46.9431ms)
+DS Bot: the import kept the .credentials.yaml that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-T8qeTQ\flat\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: the import kept the .credentials.yaml that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-T8qeTQ\broken\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: the import kept the .credentials.yaml that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-restore-ij5p2j\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ keeps one with an account sign-in, in the old flat layout or that does not read as YAML (128.1165ms)
+✔ keys the data location has already (249.8521ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-links-jhNU75\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ Sessions an earlier import left out
+  ✔ copies the group's own Session from the old home, and changes nothing there (12.3448ms)
+  ✔ copies nothing once every Session is there (1.1323ms)
+  ✔ leaves a Session this DSH cannot read in the old home (1.9698ms)
+  ✔ does nothing for data that was not imported (1.8692ms)
+✔ Sessions an earlier import left out (69.1625ms)
+DS Bot: the import skipped what it could not read in the old team workspace: [ '.pnpm-store\\.ignored_pkg' ]
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-js-3BrWs0\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-js-3BrWs0\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ links in the old team workspace
+  ✔ makes a package link again inside the chosen folder and gets past a link to nothing (53.0634ms)
+✔ links in the old team workspace (60.9181ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-find-CGwLlo\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ JS expressions in profile patches
+  ✔ copies a !!js model value as the same expression, and keeps one the data location has, without a YAML warning (45.2787ms)
+✔ JS expressions in profile patches (52.2472ms)
+▶ finding the team
+  ✔ counts the Bots and groups and lists only the readable profiles with model settings (1.239ms)
+  ✔ names each Session of the team once (0.0752ms)
+  ✔ names the own Session of every group, so an imported group can be opened (0.14ms)
+  ✔ copies only the Sessions of the team for the check, and changes nothing in the old home (22.3035ms)
+  ✔ stops copying for the check once the app quits (0.8723ms)
+  ✔ finds Sessions written in a newer format than the pinned DSH reads (2.9827ms)
+  ✔ takes the team for in use while a live process on this machine or a fresh lock elsewhere holds it (42.521ms)
+  ✔ does not take a stale lock on this machine for in use, even when its pid is alive (0.6966ms)
+  ✔ reads DSH_HOME as DSH does (0.1528ms)
+✔ finding the team (83.6428ms)
+ℹ tests 29
+ℹ suites 7
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 894.191

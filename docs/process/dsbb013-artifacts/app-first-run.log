@@ -1,0 +1,13 @@
+✔ the new data places are the new product's own, not the old ones (0.7741ms)
+✔ the old default data folder is discovered and offered, and is not adopted (1.7017ms)
+✔ the old install's custom data folder is discovered through its locations file (2.51ms)
+✔ the user's own DSH is preferred over the old folders (1.1753ms)
+✔ a first run with nothing to offer keeps the new places and saves them (2.0737ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 161.6754

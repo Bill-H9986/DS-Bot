@@ -10,7 +10,7 @@ const { existsSync, mkdirSync, readdirSync, rmdirSync, rmSync, statfsSync, statS
 export const DATA_DIR = 'data'
 export const WORKSPACE_DIR = 'workspace'
 // The layer the app adds inside a drive or a folder that is someone else's.
-export const LAYER = 'DS Bot'
+export const LAYER = 'DS Bot Base'
 
 /** Free bytes on the volume that holds `path`, measured at its nearest existing ancestor. */
 export function freeSpace(path) {

@@ -32,7 +32,7 @@ const host = createServer((request, response) => {
   }
   if ((request.headers.cookie ?? '').includes(cookie)) {
     response.writeHead(200, { 'content-type': 'text/html' })
-    response.end('<!doctype html><title>DS Bot</title><h1 id="ready">ready</h1>')
+    response.end('<!doctype html><title>DS Bot Base</title><h1 id="ready">ready</h1>')
     return
   }
   response.writeHead(401).end('unauthorized')

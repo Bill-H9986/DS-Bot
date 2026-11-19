@@ -1,0 +1,23 @@
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 113 ms
+DS Bot: start window: the start page painted 172 ms after launch
+DS Bot: start window: engine took 13 ms
+DS Bot: start window: first start window shown (a dialog) 203 ms after launch
+DS Bot: start window: import took 37 ms
+DS Bot: copied 2 Bots and 2 Sessions from C:\Users\24268\AppData\Local\Temp\ds-bot-import-home-pH84kJ\dsh
+DS Bot: start window: engine took 2 ms
+DS Bot: start window: team took 13 ms
+DS Bot: start window: no place to land: the whale dives
+DS Bot: start window: the page did not send handoffShow
+DS Bot: start window: handoffShow at ready + 2500 ms
+DS Bot: start window: cross-fade at ready + 2500 ms
+DS Bot: start window: team window shown (behind) at ready + 2724 ms
+✔ the first start offers the DSH team on the import card, copies it on cards and starts on it (2960.8257ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3105.8886

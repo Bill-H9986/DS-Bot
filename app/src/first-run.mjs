@@ -56,8 +56,11 @@ export async function pickRoot(from, signal, ui) {
   }
 }
 
-/** The places a first start offers. */
-export const defaultPlaces = () => ({ dataDir: join(homedir(), '.ds-bot'), workspace: join(homedir(), 'DS Bot') })
+// This product's own data places: its pinned DSH_HOME and its team workspace, both new
+// directories that a first start never collides with the old DS Bot's. The old `~/.ds-bot` /
+// `~/DS Bot` are migration sources only, reached through the user's own DSH (import.mjs), and
+// never set as this product's active data.
+export const defaultPlaces = () => ({ dataDir: join(homedir(), '.ds-bot-base'), workspace: join(homedir(), 'DS Bot Base') })
 
 /** The Bot team in a data folder, if it has one. */
 export function teamIn(dataDir) {
@@ -68,23 +71,67 @@ export function teamIn(dataDir) {
   }
 }
 
+// The old product's data places. They are recognised as migration sources only: the old
+// default home data folder, and the custom location an old install saved in its own shell
+// data. This app never writes into them and never makes one of them its active data; a team
+// found there is offered on the import card (import-flow.mjs), where the user answers.
+const OLD_DATA_DIR = '.ds-bot'
+const OLD_SHELL_DIR = 'DS Bot'
+
 /**
- * What the start window can say before the first-run questions: the team that a reinstall keeps,
- * or whether the user's own DSH has a team to offer.
+ * The old product's data folders that can hold a team: its default home data folder, and the
+ * custom data folder an old install chose (its locations file, in the old shell data). Each is
+ * read-only for this app.
+ * @returns {string[]} the candidate sources, deduplicated
  */
-export function teamsAt(dataDir = defaultPlaces().dataDir) {
-  const team = teamIn(dataDir)
-  return { team, offered: team === undefined && teamIn(userDshHome()) !== undefined }
+export function oldTeamSources() {
+  const sources = [join(homedir(), OLD_DATA_DIR)]
+  try {
+    const saved = JSON.parse(readFileSync(join(app.getPath('appData'), OLD_SHELL_DIR, 'locations.json'), 'utf8'))
+    if (typeof saved.dataDir === 'string') sources.push(saved.dataDir)
+  } catch { /* no old install, or its record is not readable: the default alone is enough */ }
+  return [...new Set(sources.map((source) => resolve(source)))]
+}
+
+// The first team the user can offer to a data folder without one: the user's own DSH (the
+// DS-BB-011 migration source), then the old DS Bot app's data folders. Each offer carries its
+// own `from` (the source path), so the import card names the source the user is choosing. The
+// old folders are read, never adopted as this product's data or written.
+function offeredTeam(dataDir) {
+  if (teamIn(dataDir) !== undefined) return undefined
+  let fromUserDsh
+  try {
+    fromUserDsh = findTeam(userDshHome())
+  } catch { /* an unreadable DSH home offers nothing; the old data folders are still checked */ }
+  return fromUserDsh ?? oldTeamSourceTeam()
+}
+
+/** The old DS Bot app's team, read from its data folders, if any (013-F migration source). */
+function oldTeamSourceTeam() {
+  for (const source of oldTeamSources()) {
+    const team = teamIn(source)
+    if (team !== undefined) return team
+  }
+  return undefined
 }
 
 /**
- * The team that the user's own DSH offers to a data folder without one, if any. The start page
- * asks about it on the import card (import-flow.mjs).
+ * What the start window can say before the first-run questions: the team that a reinstall keeps,
+ * or whether an offer (the user's own DSH, or the old DS Bot's data) is on the way.
+ */
+export function teamsAt(dataDir = defaultPlaces().dataDir) {
+  const team = teamIn(dataDir)
+  return { team, offered: team === undefined && offeredTeam(dataDir) !== undefined }
+}
+
+/**
+ * The team offered to a data folder without one, if any. The start page asks about it on the
+ * import card (import-flow.mjs); the user answers which source to copy, not the app.
  * @returns {ReturnType<typeof findTeam>}
  */
 function offerOf(dataDir) {
   try {
-    return teamIn(dataDir) === undefined ? findTeam(userDshHome()) : undefined
+    return offeredTeam(dataDir)
   } catch (error) {
     console.error(error)
     return undefined

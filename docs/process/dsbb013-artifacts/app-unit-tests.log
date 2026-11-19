@@ -1,0 +1,846 @@
+▶ writeAppPatch
+  ✔ writes one row that turns off the automatic credential step, next to the profiles (11.4303ms)
+  ✔ writes the file again on every launch and never carries a Settings page row (2.9451ms)
+✔ writeAppPatch (17.4634ms)
+▶ the overlay on the pinned DSH
+  ✔ targets a row the app profile mounts, whose whole config it restates (2.7204ms)
+  ✔ sets credentialOnboarding to false once laid over the profile (4.0769ms)
+✔ the overlay on the pinned DSH (37.3172ms)
+▶ the notice before the window hides
+  ✔ an answered notice hides the window and is remembered (6.5494ms)
+  ✔ a cancelled notice leaves the window where it is (2.4361ms)
+  ✔ a notice that could not be shown hides the window and asks again next time (1.8394ms)
+  ✔ a notice that is answered once is not shown again (2.4587ms)
+  ✔ a second close while the box is open joins it (2.4835ms)
+  ✔ an answer that comes after the app left hides nothing (1.5522ms)
+  ✔ a box that cannot be shown leaves the window where it is (2.0405ms)
+✔ the notice before the window hides (21.1158ms)
+✔ a build for the architecture of this Node goes on (0.7235ms)
+✔ a build for another architecture stops and says where to build it (0.5078ms)
+✔ a requested universal build stops before packing either architecture (0.1638ms)
+✔ electron-builder runs the check before it packs (0.3456ms)
+✔ the Office payload goes next to the asar for a platform the lock pins (0.4393ms)
+✔ a storage key keeps its own partition on disk (1.9797ms)
+✔ pages go anywhere on http(s) but the app’s own Host (0.6348ms)
+✔ a page’s requests reach the network and inert local schemes, not the Host (0.1933ms)
+✔ only a leased webview attaches, with fixed preferences, and its new windows become tab requests (6.2689ms)
+✔ a guest without a lease is closed, and a lease of another window is not released (0.5149ms)
+✔ Bot endpoint identifiers follow DSH session.create IDs (1.2817ms)
+✔ Bot endpoints accept only up to four absolute download roots (24.6779ms)
+✔ CDP endpoint creates and loads an initial view for a Bot with no tabs (20.8721ms)
+✔ CDP relay limits targets and created tabs to the token Bot (11.806ms)
+✔ CDP relay rejects invalid paths and Origin headers (9.5493ms)
+✔ CDP download behavior saves to the Bot path and emits download events (12.5815ms)
+✔ CDP accepts a download root created after endpoint setup (14.7973ms)
+✔ download roots are isolated per Bot (17.834ms)
+✔ cancelling a relay download removes its save path (49.7202ms)
+✔ CDP rejects outside, traversal, and symlink download paths and cancels downloads (27.7727ms)
+✔ CDP accepts a direct Playwright artifacts directory under os.tmpdir() (11.2146ms)
+✔ a relay download is cancelled if its accepted directory is swapped for an outside symlink (11.7329ms)
+✔ user hold closes relay sockets, rejects endpoints, and allows a new endpoint after give-back (7.1821ms)
+✔ navigation guard rejects the app origin and popup tabs work before relay attachment (0.8256ms)
+✔ saved active tabs restore their tab id and URL (17.3362ms)
+✔ the views stay hidden while the app’s card is up, and the shown ones come back after it (0.926ms)
+✔ closing the active saved tab preserves the replacement after another page updates (25.4526ms)
+✔ saved file and app-origin URLs restore as blank with their tab ids (16.3119ms)
+✔ load errors remain published until a real main-frame navigation starts (0.6515ms)
+✔ a tab whose window is gone joins the next window (0.5827ms)
+✔ a view that went with its window is dropped (0.4846ms)
+✔ a view that is built without a window waits for one (0.4654ms)
+✔ chromiumProfiles reads info_cache names and skips profiles without cookies (17.8741ms)
+✔ firefoxProfiles reads profiles.ini (6.1097ms)
+✔ cloneCookieStore lays out Local State plus the profile cookie db (23.7012ms)
+✔ cloneCookieStore needs Local State: without it the clone cannot decrypt (10.4473ms)
+✔ cloneCookieStore for Firefox copies the sqlite family (16.8691ms)
+✔ appBoundRows lists v20 rows by name and domain, and counts the rest readable (21.932ms)
+✔ harvestCookies refuses an all-v20 clone: launching the browser would read nothing (23.3619ms)
+✔ locksProfile matches a browser process to the user-data root it locks (0.5047ms)
+✔ an already-canonical path needs no relaunch (0.9469ms)
+✔ a short or linked path returns the canonical one (0.2046ms)
+✔ a path that cannot be resolved keeps the caller going (0.148ms)
+✔ the default realpath leaves the running exe alone (0.4823ms)
+✔ a running part the user opened takes no input, and its Stop action is the plugin's (7.1252ms)
+✔ a part that is not the running one the user opened keeps its composer (1.8316ms)
+✔ with Enter sending on, a plain Enter sends the draft and clears it (1.4842ms)
+✔ with Enter sending off, a plain Enter is a newline and the send button sends (2.0901ms)
+✔ a roster without the flag keeps the default: Enter sends (0.9068ms)
+✔ the ask_user own-answer field honors the Enter preference (3.2997ms)
+✔ Shift+Enter and IME confirmation keep their default behavior (1.0914ms)
+✔ a parallel part cannot write or clear the viewed part stream (1.5753ms)
+✔ even when bare JS focus already reports true, chat clicks the composer once through the input pipeline and sends on Enter (6.7828ms)
+✔ an unfocused window is clicked through the input pipeline until document.hasFocus() holds before typing (2.2069ms)
+✔ a dropped Enter under Xvfb re-focuses and sends on the second press, without re-pressing an in-flight send (7.0972ms)
+✔ every press being dropped stops after three tries and reports the empty key trace (5.722ms)
+✔ an IME holding the key stops after three tries and reports composing and prevented state (6.9925ms)
+✔ the script waits for the start window to close and leave one visible window before running chat (0.1836ms)
+✔ the cursor window is transparent, click-through and floats above apps (2.9662ms)
+✔ the window sits so the arrow tip lands on the point (1.0547ms)
+✔ a covered point draws nothing and hides a live cursor (1.5483ms)
+✔ darwin draws unprotected; win32 hides the cursor from captures (1.6118ms)
+✔ linux has no on-screen cursor (0.2984ms)
+✔ a slow checker answer means do not draw (304.7428ms)
+✔ the checker kills its helper on dispose (1.982ms)
+✔ cursorHtml paints the arrow in the Bot color with the avatar and a ripple (1.1358ms)
+✔ the helper runs from a copy outside the app bundle (33.9671ms)
+✔ a matching copy is reused without copying again (29.7999ms)
+✔ a cached copy whose bundle signature fails is replaced (44.1165ms)
+✔ a copy that differs from the packaged helper is replaced (54.196ms)
+✔ a new helper version removes the old copy (63.309ms)
+✔ a copy that fails its signature check is dropped and reports the error (34.9878ms)
+✔ a receipt cannot point out of the helper folder (14.4021ms)
+﹣ a real copy keeps DeepSeek's signature and drops quarantine (0.1866ms) # SKIP
+✔ the indicator window is frameless, unfocusable, protected and centered (1.8241ms)
+✔ empty entries hide the window; button clicks reach onAction (0.9953ms)
+✔ the page lists every entry, escapes markup and uses the passed labels (0.4812ms)
+✔ button actions go over the dedicated channel and only from the indicator (0.3387ms)
+✔ a reopen keeps exactly one action listener, so one click acts once (0.32ms)
+✔ rows are sanitized: hex color and bounded data-url avatar only (0.4272ms)
+✔ the window resizes to the measured pill width after load (4.9223ms)
+✔ toSetDetails maps a normalized cookie to the Electron set call (1.2418ms)
+✔ applyCookies stores, verifies by read-back and flushes the store (4.0452ms)
+✔ applyCookies reports rejects and silent drops per cookie (1.2313ms)
+✔ a pending import is value-bearing, one-shot and capped (4.9074ms)
+✔ preview groups by site and reports skipped and adjusted entries (2.2484ms)
+✔ every format and encoding variant parses all eight cookies (10.668ms)
+✔ flags survive: HttpOnly prefix, Secure, SameSite, session (1.2076ms)
+✔ a cookie header string is recognized and refused: it has no domain or path (0.7259ms)
+✔ malformed lines are skipped with reasons; the good ones still parse (1.9069ms)
+✔ malformed JSON entries are skipped with reasons (0.7246ms)
+✔ truncated JSON reports unreadable (0.5813ms)
+✔ duplicates resolve last-entry-wins with a warning (0.3276ms)
+✔ SameSite=None without Secure is dropped to unspecified with a warning, not skipped (0.2763ms)
+✔ prefix rules and expired entries are refused before they can fail the store (0.3564ms)
+✔ the import, the data move and the data location stay off Electron's fs (3.3431ms)
+✔ outside Electron the disk is plain fs (0.2885ms)
+✔ the app carries the deep-view version ds-bot requires (2.6462ms)
+✔ a download answered with a gateway error counts as a failure to retry (2.134ms)
+✔ a build that fails on its own is not retried (0.2882ms)
+✔ only the error that ended the build counts, not an attempt retried before it (0.2878ms)
+✔ a gateway error runs the build again after a wait, until it succeeds (1.1959ms)
+✔ the build stops after the last retry and keeps its exit code (0.3519ms)
+✔ a build that fails on its own or is stopped ends at once (0.2925ms)
+✔ npm run dist goes through the retrying script (0.5618ms)
+✔ a download starts at once, asks where it goes, and lands there when both are in (12.3381ms)
+✔ an answer before the download is done waits for it (4.94ms)
+✔ a cancelled picker cancels the download and leaves nothing behind (3.2452ms)
+✔ a picker that cannot be shown saves into the downloads folder under a free name (4.2708ms)
+✔ a replace that the picker allowed overwrites the old file (4.482ms)
+✔ a server name cannot reach outside the staging folder (2.1563ms)
+✔ a free name counts up past the taken ones (2.185ms)
+✔ the downloads folder is looked up for each download; a missing one falls back to home (2.3229ms)
+✔ a download from another contents, or without a window, passes through (1.2479ms)
+✔ the window is asked for at the moment of the download, because the app may build a new one (2.1856ms)
+✔ a download whose chosen path cannot be written lands in the downloads folder instead (5.0251ms)
+✔ a download that can go nowhere keeps its staged file (4.1293ms)
+✔ a cross-drive move copies next to the target, then takes its name (5.1841ms)
+✔ a cross-drive move whose copy fails leaves the old file and the staged file alone (4.8871ms)
+✔ two downloads of one name without a picker each keep their own file (9.9216ms)
+✔ a .asar file of the user's stays whole when a download of that name gets a free name (7.523ms)
+✔ a cross-drive move can copy a staged .asar file (4.6835ms)
+✔ the new data places are the new product's own, not the old ones (1.4281ms)
+✔ the old default data folder is discovered and offered, and is not adopted (17.9439ms)
+✔ the old install's custom data folder is discovered through its locations file (6.122ms)
+✔ the user's own DSH is preferred over the old folders (2.2095ms)
+✔ a first run with nothing to offer keeps the new places and saves them (3.8808ms)
+▶ goalPatch
+  ✔ restates every real preset that carries goal rows, minus exactly those rows (4.878ms)
+  ✔ keeps !!js rows as expression objects the overlay writes back as !!js scalars (25.6611ms)
+  ✔ does nothing when no preset carries goal rows (2.1639ms)
+  ✔ a profile-patch edit to a preset survives, minus the goal rows (2.1638ms)
+✔ goalPatch (40.155ms)
+▶ reconcileGoal
+  ✔ writes the overlay next to the profiles and drops a stale one when satisfied (7.4106ms)
+✔ reconcileGoal (7.6621ms)
+✔ picks a free port once and keeps it (24.8064ms)
+✔ moves to another port when the saved one is taken (9.6751ms)
+✔ takes a new port for a file it cannot read (3.3123ms)
+✔ Linux uses the bundled plain Node, not Electron in Node mode (1.9133ms)
+﹣ the Linux Host loads sharp only in its plain Node child (0.2237ms) # SKIP
+✔ withLogTail attaches the stderr tail so the real cause reaches the box (0.7147ms)
+✔ withLogTail redacts launch tokens and skips an empty tail (0.1883ms)
+✔ the model settings of DSH Desktop come first, then DSH Web, then the profile with most rows (1.6548ms)
+✔ the regenerable folders stay behind by default from 200 MB on, and the sizes follow the options (0.3084ms)
+✔ the time left is in whole minutes, moves a full minute at a time and never counts down to 0 (0.1859ms)
+✔ the import card says what it found, what the copy takes and which model settings go along (4.7719ms)
+✔ the card follows a changed model and options, and the copy takes them (1.6631ms)
+✔ sizes that took too long leave the numbers out of the card instead of guessing (0.9792ms)
+✔ a drive without room for the copy and 500 MB says how much is missing (0.8879ms)
+✔ 「换个位置…」 on the import card picks another place for the import (0.7929ms)
+✔ a team that DSH holds waits on its card and the copy goes on by itself once DSH lets go (1.3502ms)
+✔ a holder that comes while the card checks the chats makes that check count for nothing (3.3881ms)
+✔ the copying card counts the checked chats, then the bytes, then starts the team (1.3328ms)
+✔ the check of the chats fills the import arc's first 15 %, the copy the rest (0.2325ms)
+✔ a quit during the copy stops it and leaves no team (1.451ms)
+✔ chats newer than this DSH reads say so, and the start goes on without the team (0.8886ms)
+✔ a failed copy offers to try again, and the second copy can go through (1.0161ms)
+✔ a quit or another start while a card waits ends the import without an answer (0.7796ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-import-LwhQt7\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-import-LwhQt7\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-4Z01Jk\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ importTeam
+  ✔ copies the team without its lock, its turns in flight, its workspace, its old workspace id or Agents (2.2903ms)
+  ✔ copies every Session the team names into the same folder group, and only those (1.2046ms)
+  ✔ copies the own Session of every group, so an imported group can be opened (0.3496ms)
+  ✔ copies the attachments, the keys, and the model rows of the chosen profile (2.4567ms)
+  ✔ puts the old workspace files in the chosen folder without replacing one that is there (0.5982ms)
+  ✔ records the import, leaves nothing staged and changes nothing in the old home (5.7119ms)
+  ✔ does not replace a team that is there (2.2759ms)
+✔ importTeam (344.2089ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-4Z01Jk\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ a copy that stopped
+  ✔ a copy that stopped part way runs again (79.96ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-4Z01Jk\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ a stopped copy leaves no Bot team (2.2813ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-4Z01Jk\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: the import kept the .credentials.yaml and .env that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-stopped-4Z01Jk\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ a quit during the move-in leaves no Bot team, and the next copy finishes (90.1182ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-Ab0MTJ\host\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ a copy that failed part way removes what it staged and leaves no Bot team (31.1099ms)
+✔ a copy that stopped (229.0351ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-Ab0MTJ\saved\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ keys the data location has already
+  ✔ copies the old keys over the .credentials.yaml that only the Host's first start wrote (52.7301ms)
+DS Bot: the import kept the .credentials.yaml that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-Ab0MTJ\account\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ keeps a .credentials.yaml with a key saved since, copies the rest and reports which it kept (51.4003ms)
+DS Bot: the import kept the .credentials.yaml that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-Ab0MTJ\flat\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: the import kept the .credentials.yaml that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-keys-Ab0MTJ\broken\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: the import kept the .credentials.yaml that the data location has
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-restore-0EuBia\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+  ✔ keeps one with an account sign-in, in the old flat layout or that does not read as YAML (151.1793ms)
+✔ keys the data location has already (308.207ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-links-YpdERr\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ Sessions an earlier import left out
+  ✔ copies the group's own Session from the old home, and changes nothing there (13.419ms)
+  ✔ copies nothing once every Session is there (1.0848ms)
+  ✔ leaves a Session this DSH cannot read in the old home (2.0044ms)
+  ✔ does nothing for data that was not imported (1.9395ms)
+✔ Sessions an earlier import left out (77.3337ms)
+DS Bot: the import skipped what it could not read in the old team workspace: [ '.pnpm-store\\.ignored_pkg' ]
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-js-nmehFq\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-js-nmehFq\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ links in the old team workspace
+  ✔ makes a package link again inside the chosen folder and gets past a link to nothing (55.753ms)
+✔ links in the old team workspace (63.838ms)
+DS Bot: skipped the model settings in C:\Users\24268\AppData\Local\Temp\ds-bot-app-find-TieVn4\dsh\profiles\broken\cordis.patch.yml: unexpected end of the stream within a flow collection (3:1)
+
+ 1 | - id: llm-deepseek
+ 2 |   config: [unclosed
+ 3 | 
+-----^
+▶ JS expressions in profile patches
+  ✔ copies a !!js model value as the same expression, and keeps one the data location has, without a YAML warning (55.0908ms)
+✔ JS expressions in profile patches (63.6528ms)
+▶ finding the team
+  ✔ counts the Bots and groups and lists only the readable profiles with model settings (1.0025ms)
+  ✔ names each Session of the team once (0.0738ms)
+  ✔ names the own Session of every group, so an imported group can be opened (0.1224ms)
+  ✔ copies only the Sessions of the team for the check, and changes nothing in the old home (20.5213ms)
+  ✔ stops copying for the check once the app quits (0.7132ms)
+  ✔ finds Sessions written in a newer format than the pinned DSH reads (2.1573ms)
+  ✔ takes the team for in use while a live process on this machine or a fresh lock elsewhere holds it (45.7828ms)
+  ✔ does not take a stale lock on this machine for in use, even when its pid is alive (0.7219ms)
+  ✔ reads DSH_HOME as DSH does (0.1809ms)
+✔ finding the team (84.0055ms)
+✔ win32: an installed copy keeps its own shell data and encryption identity (1.9358ms)
+✔ darwin: an installed copy keeps its own shell data and encryption identity (0.3262ms)
+✔ linux: an installed copy keeps its own shell data and encryption identity (0.277ms)
+✔ a fresh installation uses its own shell directory, not the old product’s (0.3303ms)
+✔ an old product’s installed copy is not adopted (0.2832ms)
+✔ an explicit shell directory never probes installed user data (0.2156ms)
+✔ an isolated data run never probes an installed application (0.2223ms)
+✔ old update clients receive the identical DS Bot payload: mac-arm64.zip (111.8351ms)
+✔ old update clients receive the identical DS Bot payload: mac-x64.zip (102.477ms)
+✔ old update clients receive the identical DS Bot payload: linux-amd64.deb (94.8974ms)
+✔ the published installer identity is new and separated from the old product (13.0474ms)
+✔ the launch token, API keys and the sign-in callback do not reach the log (1.8262ms)
+✔ the home folder becomes %USERPROFILE% in every spelling (0.9362ms)
+✔ redaction keeps ordinary words and can run twice (0.2105ms)
+✔ output splits into whole lines; the rest waits (1.2128ms)
+✔ a write that would pass 2 MB goes into a fresh file, three files at most (12.4938ms)
+✔ the log rotates by size and its tail reads across the files (16.9531ms)
+✔ a log that cannot be written does not stop the app (3.009ms)
+✔ the console goes on as before and into the log (3.0949ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 247 ms
+DS Bot: start window: the start page painted 387 ms after launch
+DS Bot: start window: engine took 17 ms
+DS Bot: start window: team took 14 ms
+DS Bot: start window: no place to land: the whale dives
+DS Bot: start window: the page did not send handoffShow
+DS Bot: start window: handoffShow at ready + 814 ms
+DS Bot: start window: cross-fade at ready + 814 ms
+DS Bot: start window: team window shown (behind) at ready + 1047 ms
+✔ a page that does not show the card does not hold the close (3403.2285ms)
+✔ the close asks on a card in the window and hides it once the card is answered (13.824ms)
+✔ later closes hide the window without asking (0.4649ms)
+✔ the tray quit ends the app (14.8204ms)
+DS Bot 0.2.2 (darwin x64), Electron undefined
+DS Bot: start window: data took 241 ms
+DS Bot: start window: the start page painted 376 ms after launch
+DS Bot: start window: engine took 39 ms
+DS Bot: start window: team took 16 ms
+DS Bot: start window: no place to land: the whale dives
+DS Bot: start window: the page did not send handoffShow
+DS Bot: start window: handoffShow at ready + 812 ms
+DS Bot: start window: cross-fade at ready + 813 ms
+DS Bot: start window: team window shown (behind) at ready + 1061 ms
+✔ startApp on darwin never fetches GitHub Releases or pops a live update card (1502.49ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 242 ms
+Error: the Host did not start
+    at HostProcess.start (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/test/helpers/fake-host-process.mjs:46:27)
+    at async startEngine (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:649:18)
+    at async boot (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:423:18)
+DS Bot: start window: the start page painted 388 ms after launch
+DS Bot: update failed: download failed
+✔ a failed start offers the downloading update on its banner and installs it (377.8766ms)
+✔ the app ends after the update (5.8989ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 270 ms
+✔ a quit while the first run is up ends the app (338.2454ms)
+DS Bot: start window: no engine after 180 s
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: the start page did not load: the page file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/start/start.html?start=later did not load
+DS Bot: start window: data took 241 ms
+DS Bot: start window: later start window shown (the page did not say it painted) 3127 ms after launch
+DS Bot: start window: engine took 2775 ms
+Error: the page http://127.0.0.1:60816/ did not load
+    at FakeWindow.loadURL (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/test/helpers/fake-electron.mjs:95:54)
+    at connectHost (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1431:13)
+✔ a first load that never came through does not carry the token again (3084.3192ms)
+✔ the app ends (15.8568ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 242 ms
+DS Bot: start window: the start page painted 377 ms after launch
+DS Bot: start window: first start window shown (a dialog) 390 ms after launch
+✔ quitting during the copy stops it, then quits, and leaves no team behind (356.9572ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 244 ms
+DS Bot: start window: the start page painted 382 ms after launch
+DS Bot: start window: engine took 20 ms
+DS Bot: start window: first start window shown (a dialog) 405 ms after launch
+DS Bot: start window: import took 58 ms
+DS Bot: copied 2 Bots and 2 Sessions from C:\Users\24268\AppData\Local\Temp\ds-bot-import-home-kdLOe1\dsh
+DS Bot: start window: engine took 5 ms
+DS Bot: start window: team took 1 ms
+DS Bot: start window: no place to land: the whale dives
+DS Bot: start window: the page did not send handoffShow
+DS Bot: start window: handoffShow at ready + 2502 ms
+DS Bot: start window: cross-fade at ready + 2502 ms
+DS Bot: start window: team window shown (behind) at ready + 2723 ms
+✔ the first start offers the DSH team on the import card, copies it on cards and starts on it (3135.4638ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 241 ms
+DS Bot: start window: the start page painted 381 ms after launch
+DS Bot: start window: later start window shown (a dialog) 385 ms after launch
+DS Bot: the data cannot move to C:\Users\24268\AppData\Local\Temp\ds-bot-main-home-7RbsCe\inside (nested)
+Error: EPERM: operation not permitted, realpath 'C:\System Volume Information'
+    at realpathSync.native (node:fs:3525:18)
+    at real (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/copy-tree.mjs:41:28)
+    at Array.map (<anonymous>)
+    at moveProblem (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/move-data.mjs:32:72)
+    at moveProblemOf (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1065:21)
+    at moveReason (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1020:21)
+    at moveCard (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1007:18)
+    at pickMove (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1003:3)
+    at async StartWindow.asking (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/start-window.mjs:538:14)
+    at async moveFromStart (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:987:5) {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'realpath',
+  path: 'C:\\System Volume Information'
+}
+DS Bot: the data cannot move to C:\System Volume Information (permission)
+DS Bot: start window: engine took 79 ms
+DS Bot: start window: the data moves: the start window becomes the move's
+✔ a later start on a drive that runs low shows the place line, and its button moves the data on cards (450.9557ms)
+DS Bot 0.2.2 (darwin x64), Electron undefined
+DS Bot: the system tray is not available: no system tray here
+DS Bot: start window: data took 243 ms
+✔ the application menu of macOS carries a Quit when there is no tray (307.6274ms)
+DS Bot 0.2.2 (darwin x64), Electron undefined
+DS Bot: start window: data took 260 ms
+✔ the application menu of macOS has no Quit (321.3052ms)
+✔ the app ends (11.2429ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 234 ms
+DS Bot: start window: the start page painted 371 ms after launch
+DS Bot: start window: later start window shown (a dialog) 373 ms after launch
+DS Bot: start window: the data moves: the start window becomes the move's
+Error: EEXIST: file already exists, mkdir 'C:\Users\24268\AppData\Local\Temp\ds-bot-move-LhLpYq\a-file'
+    at async mkdir (node:internal/fs/promises:1719:10)
+    at async copyData (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/move-data.mjs:52:3)
+    at async file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1114:9
+    at async runMove (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1138:3)
+    at async moveAnswer (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1046:3) {
+  errno: -4075,
+  code: 'EEXIST',
+  syscall: 'mkdir',
+  path: 'C:\\Users\\24268\\AppData\\Local\\Temp\\ds-bot-move-LhLpYq\\a-file'
+}
+Error: EEXIST: file already exists, mkdir 'C:\Users\24268\AppData\Local\Temp\ds-bot-move-LhLpYq\a-file'
+    at async mkdir (node:internal/fs/promises:1719:10)
+    at async copyData (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/move-data.mjs:52:3)
+    at async file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1114:9
+    at async runMove (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1138:3)
+    at async moveAnswer (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/src/main.mjs:1046:3) {
+  errno: -4075,
+  code: 'EEXIST',
+  syscall: 'mkdir',
+  path: 'C:\\Users\\24268\\AppData\\Local\\Temp\\ds-bot-move-LhLpYq\\a-file'
+}
+✔ a failed copy asks on a card whether to copy again or start where the data was (375.051ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 224 ms
+DS Bot: start window: the start page painted 339 ms after launch
+DS Bot: start window: later start window shown (a dialog) 341 ms after launch
+DS Bot: start window: the data moves: the start window becomes the move's
+✔ a move waits on a card while another DSH uses the data, and goes on once it is closed (2352.2195ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 227 ms
+DS Bot: start window: the start page painted 350 ms after launch
+DS Bot: start window: later start window shown (a dialog) 352 ms after launch
+DS Bot: start window: the data moves: the start window becomes the move's
+✔ a folder that cannot be used after the engine stopped is refused on a card (335.4248ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 208 ms
+DS Bot: start window: the start page painted 326 ms after launch
+DS Bot: start window: engine took 17 ms
+DS Bot: start window: team took 15 ms
+DS Bot: start window: no place to land: the whale dives
+DS Bot: start window: the page did not send handoffShow
+DS Bot: start window: handoffShow at ready + 812 ms
+DS Bot: start window: cross-fade at ready + 813 ms
+DS Bot: start window: team window shown (behind) at ready + 1060 ms
+DS Bot: start window: moving start window shown (a dialog) 1432 ms after launch
+DS Bot: start window: the start page painted 1433 ms after launch
+✔ a later start with room to spare shows no place line; Settings still moves the data (1399.6975ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 149 ms
+Error: EACCES: permission denied, open 'state.json'
+    at TestContext.<anonymous> (file:///C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app/test/main-uncaught.test.mjs:19:26)
+    at async Test.run (node:internal/test_runner/test:1409:7)
+    at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+  code: 'EACCES'
+}
+✔ an error nothing caught shows the failure page, not a message box (214.2561ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 141 ms
+DS Bot: start window: the start page painted 238 ms after launch
+DS Bot: start window: engine took 15 ms
+DS Bot: start window: team took 15 ms
+DS Bot: start window: no place to land: the whale dives
+DS Bot: start window: the page did not send handoffShow
+DS Bot: start window: handoffShow at ready + 812 ms
+DS Bot: start window: cross-fade at ready + 812 ms
+DS Bot: start window: team window shown (behind) at ready + 1042 ms
+DS Bot: update 9.9.9 downloaded
+DS Bot: the update 9.9.9 waits for the window
+✔ the update waits for the window and is installed when the window comes back (1349.8742ms)
+✔ the app ends after the update (3.5377ms)
+DS Bot 0.2.2 (win32 x64), Electron undefined
+DS Bot: start window: data took 130 ms
+DS Bot: start window: the start page painted 207 ms after launch
+DS Bot: start window: engine took 24 ms
+✔ the app starts with a window and a tray (170.8128ms)
+✔ places saved before the free space at the start was kept keep it from this start on (0.6584ms)
+DS Bot: start window: team took 15 ms
+DS Bot: start window: no place to land: the whale dives
+DS Bot: start window: the page did not send handoffShow
+DS Bot: start window: handoffShow at ready + 805 ms
+DS Bot: start window: cross-fade at ready + 806 ms
+DS Bot: start window: team window shown (behind) at ready + 1041 ms
+✔ the first window trades the launch URL for the Host's cookie (1056.3099ms)
+✔ a window that is gone for good is built anew and talks to the same Host (1.4369ms)
+✔ closing the window hides it; the app goes on (0.5164ms)
+✔ the tray opens the window again (0.2023ms)
+✔ the tray quit ends the app and stops the Host (13.1276ms)
+✔ the new data location is an empty or new folder apart from the data, the team workspace, DSH and the program (16.9671ms)
+✔ the program folder is the whole app bundle on macOS (0.1385ms)
+✔ the data is copied whole, without the lock and the temporary folders, and the old folder stays (32.8202ms)
+✔ a copy that is stopped or fails leaves no new folder and no staging folder (11.1887ms)
+✔ only the staging folders of an earlier move go before the next copy (32.1884ms)
+✔ a folder that a link leads into counts as that folder (7.3127ms)
+✔ a data folder that is itself a link moves with its contents (15.0192ms)
+✔ links in the data lead inside the copy, not back into the old folder (19.9643ms)
+✔ a link the move cannot make again stops the move; the import skips it (30.0244ms)
+▶ notifications
+  ✔ a window that is not in front gets one, and the click opens its Session (1.1586ms)
+  ✔ a window already in front is left alone (0.1383ms)
+  ✔ a denied permission shows nothing, and says so (0.0876ms)
+  ✔ an unreported permission is attempted: other platforms ask at the first show (0.0991ms)
+  ✔ what goes out is capped, and an empty notice is no notice (0.1099ms)
+  ✔ focusing the window closes what is still up (0.178ms)
+  ✔ a platform with no notifications reports it instead of failing (0.0963ms)
+  ✔ the badge counts conversations, capped at what a dock shows (0.0974ms)
+✔ notifications (2.9593ms)
+▶ officeRuntime
+  ✔ sees a complete payload and nothing else (3.136ms)
+✔ officeRuntime (3.5582ms)
+▶ officeCli
+  ✔ runs the CLI from the unpacked tree, not through the asar (0.177ms)
+  ✔ leaves an unpacked checkout alone (0.1014ms)
+✔ officeCli (0.4367ms)
+▶ reconcileOfficeRuntime
+  ✔ inserts the workspace tool and the Office skills against the payload on 0.2.2-rc.1 (10.2631ms)
+  ✔ overrides existing web-app Office rows with pythonEnvironment on 0.2.2-rc.2 without duplicate inserts (2.8551ms)
+  ✔ writes no overlay and drops a stale one when the payload is gone (2.349ms)
+  ✔ writes no overlay without a runtime directory (0.3898ms)
+✔ reconcileOfficeRuntime (16.1242ms)
+✔ the check profile boots without the Office overlay (0.385ms)
+✔ every package that the app runs on is a dependency, not only a peer (4.8479ms)
+✔ sharp native modules and versioned libvips libraries are unpacked together (10.5232ms)
+✔ the LibreOffice engine ships as plain files beside the asar, the kit inside it (3.662ms)
+✔ on Windows the Cua Driver SDK and its runtime ship as plain files beside the asar (3.0491ms)
+✔ Linux leaves the Host and its dependencies readable by plain Node (2.1205ms)
+✔ the app has the version of ds-bot (0.5805ms)
+✔ the mac package asks macOS for local network access (1.7423ms)
+✔ a folder lists its folders first, each sorted as people read numbers, and hides hidden ones (12.9801ms)
+✔ the breadcrumb runs from the root down to the folder (0.2708ms)
+✔ a folder that is gone, a file and a missing drive are answers, not throws (3.0083ms)
+✔ a Windows long path lists like any other (3.7024ms)
+✔ a new folder is made once, and a bad or taken name says why (1.7731ms)
+✔ Windows names keep to what Windows allows (0.3613ms)
+✔ a save into a taken name asks first; a folder of that name is no file (2.0789ms)
+✔ a typed path: ~ is home, a relative one starts where the picker is (0.2676ms)
+✔ a picker opens in the nearest folder that exists (0.9714ms)
+✔ the page that shows a folder picker lists, makes a folder and chooses it (3.306ms)
+✔ another page gets nothing from a picker it does not show (0.3865ms)
+✔ a save picker asks before it replaces, and answers once replace is said (1.1115ms)
+✔ a page that does not show the picker in time gets no answer to wait for (52.8248ms)
+✔ a place or drive with a long name is cut with an ellipsis, and its title keeps the whole path (0.7785ms)
+✔ free space is read at the nearest existing ancestor of a folder that is not there yet (2.2125ms)
+✔ sizes read as Explorer shows them (0.1403ms)
+✔ the drive letter is read from a Windows path only (0.136ms)
+✔ a path under the home folder is written with ~ (0.2334ms)
+✔ the place line names the drive and its free space, or the folder (0.6223ms)
+✔ a drive runs low at a fifth of the free space it had when the data went there (0.1668ms)
+✔ the picker opens in the data folder's parent (1.5652ms)
+✔ the current root is the parent of a data and a workspace folder that are siblings (0.8041ms)
+✔ an empty tree holds nothing but empty folders (2.2195ms)
+✔ a new or empty folder is the root itself (3.6571ms)
+✔ a drive or a folder with other things in it gets a DS Bot layer (2.2593ms)
+✔ an empty root of the app's own is used again; someone else's layer is refused (4.0235ms)
+✔ the place the data is in now is no change, and a place inside it is refused (9.643ms)
+✔ a folder that cannot be read counts as one without permission (0.2892ms)
+✔ OneDrive, the DSH home and the program folder are refused, through links too (5.5471ms)
+✔ the write probe makes only the missing layers and takes them away again (3.6497ms)
+▶ downloadArchive
+  ✔ retries a gateway error with the configured backoff and returns the bytes (1.0953ms)
+  ✔ gives up after three retries and reports every attempt (0.4069ms)
+  ✔ does not retry a refusal the next attempt cannot change (0.1454ms)
+  ✔ retries a dropped connection (0.213ms)
+✔ downloadArchive (2.5534ms)
+▶ runtimeTarget
+  ✔ maps the platforms electron-builder packs for to the lock's targets (0.0793ms)
+✔ runtimeTarget (0.1581ms)
+▶ primaryRuntimeManifest
+  ✔ carries the platform, both interpreters and the locked wheels, but no pnpm (0.522ms)
+  ✔ maps mac and linux targets to the manifest platform names (0.1741ms)
+  ✔ changes the digest with the target (0.1275ms)
+✔ primaryRuntimeManifest (0.9849ms)
+▶ runtimeReusable
+  ✔ is false without a payload, true with a complete one, false on a digest change (2.4978ms)
+✔ runtimeReusable (4.2024ms)
+✔ a profile-installed bundle is detected with its own version (4.458ms)
+✔ no manifest, missing package and foreign dependencies are not shadows (2.5184ms)
+✔ removal drops the dependency row and the profile link, and leaves the pnpm store alone (7.7964ms)
+✔ a plain copy and the engine fallback copy are removed (6.3568ms)
+﹣ a failed removal throws and keeps the dependency row, so the copy is found again (2.1012ms) # read-only folders do not block removal here
+﹣ a failure on a later name keeps only the rows of the packages that are still there (0.1673ms) # read-only folders do not block removal here
+▶ the app profile
+  ✔ mounts DSH Web, which the window shows, and the Bot team (1.2132ms)
+✔ the app profile (24.0346ms)
+▶ claimBundles
+  ✔ puts the app bundles first, keeps the user bundles and drops the retired ones (1.1331ms)
+  ✔ leaves a profile that already lists them alone (0.6415ms)
+✔ claimBundles (2.6798ms)
+✔ the packages carry the names electron-builder gives them, and copies drop the version (1.2645ms)
+✔ sizes are whole megabytes, as GitHub shows them (0.1323ms)
+✔ the table lists Windows first, then macOS, Linux and Android, and says which files are not for download (0.6268ms)
+✔ a mirror comes before GitHub, and a fork links to its own releases (0.3368ms)
+✔ SHA256SUMS.txt lists each package under both of its names, in the format sha256sum checks (0.2842ms)
+✔ a missing package is named; other files in the folder do not count (0.1979ms)
+✔ the table goes on top of the notes, and a second run replaces it (0.3578ms)
+✔ the script hashes and copies the packages and prints the notes (64.7687ms)
+✔ the script stops when a package is missing, so the release is not marked Latest (50.3714ms)
+✔ the release becomes Latest last, after every job that attaches files (14.9653ms)
+✔ both READMEs link the latest release and do not hard-code release version numbers (0.5378ms)
+▶ searchSelectorPatch
+  ✔ restores the app bundles' web selection when auto is disabled and still selected (1.5977ms)
+  ✔ does nothing while the auto provider is enabled (0.5506ms)
+  ✔ does nothing when the profile already names another provider (0.3942ms)
+✔ searchSelectorPatch (3.7562ms)
+▶ reconcileSearchSelector
+  ✔ writes the overlay where DSH only reads it through patchFiles, and drops it when satisfied (3.9288ms)
+  ✔ removes a stale overlay when the auto provider is on again (1.5738ms)
+✔ reconcileSearchSelector (6.2022ms)
+DS Bot: could not read damaged while checking the team: damaged frame
+DS Bot: could not read gone while checking the team: no such Session
+▶ unreadableSessions
+  ✔ names only the Sessions that a newer DSH wrote, and closes every handle it opens (1.6078ms)
+✔ unreadableSessions (2.2198ms)
+dsh web: http://127.0.0.1:51919/?token=<hidden>
+▶ the first-run check
+  ✔ reports the Session with a record that this DSH does not know (0.2206ms)
+✔ the first-run check (3939.4469ms)
+▶ the window and the tray
+  ✔ a normal close hides the window; the app goes on (2.7642ms)
+  ✔ the first close asks once, and a cancelled answer leaves the window visible (3.7982ms)
+  ✔ an answered notice hides the window and is remembered (1.6651ms)
+  ✔ two closes while the box is open ask once (1.3039ms)
+  ✔ a close during an import or a data move ends the app instead of hiding (1.0636ms)
+  ✔ the tray opens the window again (1.0921ms)
+  ✔ a window that is gone for good is built anew, and the app does not end (0.894ms)
+  ✔ before the first run has chosen its places there is no window to show (0.9062ms)
+  ✔ the tray quits the app once (0.929ms)
+  ✔ without a tray the close keeps the window in the task bar (1.6952ms)
+  ✔ without a tray the close asks whether the app should end (1.3661ms)
+  ✔ without a tray a called-off question leaves the app alone (1.2757ms)
+  ✔ a refused quit leaves the tray at work (0.9581ms)
+  ✔ no window closed does not end the app (0.8475ms)
+  ✔ the end of the Windows session lets the window close (0.854ms)
+  ✔ a cancelled macOS shutdown leaves the app running (0.8891ms)
+  ✔ on macOS the Dock icon opens the window, and a fullscreen window leaves fullscreen first (0.982ms)
+  ✔ the tray of macOS has no click of its own; its menu is the way back (0.8188ms)
+  ✔ a window that is opened again while it leaves fullscreen stays (0.8343ms)
+✔ the window and the tray (26.3059ms)
+✔ the start page runs under its CSP: no inline style or script, no data: or network URLs (2.6672ms)
+✔ every file the page loads is relative and inside src/start (2.1142ms)
+✔ the page binds window.dsBotStart through onState and act only (0.1903ms)
+✔ the page sends only the acts of the start window (0.3444ms)
+✔ the start page draws the progress as a ring of three or four arcs and a closing circle (1.5471ms)
+✔ an empty or hidden arc leaves no dot: no dash touches its path (0.9909ms)
+✔ every stage is seen active before it fills, even one done before the page painted or while a card waited (0.4144ms)
+✔ the whale's entrance waits until the window is on screen (0.6101ms)
+✔ the footer is the place line alone, centred with a grey button, on first and later starts (0.56ms)
+✔ the failure page says what happened, what to do for each reason, and folds out the log (0.3042ms)
+✔ the team view that did not load says what happened and what to do, and folds out the log (0.2922ms)
+✔ a failed copy says what happened and what to do, retries or starts without the team, and folds out the log (0.1836ms)
+✔ a move that does not go through has one card with three variants (0.1794ms)
+✔ all locales carry the same keys and the same placeholders (2.0381ms)
+✔ every text key starts with one of the eleven layers (0.1862ms)
+✔ the whale and the hint row have only the lines for when the user is needed (0.2084ms)
+✔ each layer ends its lines as its rule says (0.3841ms)
+✔ the zh lines stay within their layer’s length (0.3258ms)
+✔ a button that opens the system picker ends with … (0.2679ms)
+✔ the zh copy shows no English but the allowed names and units (0.4223ms)
+✔ every text key that the page uses exists (9.5281ms)
+✔ the main process uses only keys of the table and keeps no table of its own (1.1517ms)
+✔ t fills placeholders and falls back to zh, then to the key (0.2599ms)
+✔ t picks the English singular or plural by the value (0.0608ms)
+✔ langOf resolves supported locales and falls back to en (0.0718ms)
+✔ the generated blocks of the start page are current (53.0003ms)
+✔ the start window is 720 × 540, and 720 × 500 on a work area under 588 high (1.2047ms)
+✔ the start window is centred on the work area under the cursor (0.1267ms)
+✔ the team window is centred on the start window and stays inside the work area (0.1675ms)
+✔ the easing is CSS cubic-bezier() (0.1804ms)
+✔ the team window shows by itself after 2.5 s on a first start or a celebration, else 0.8 s (0.1026ms)
+✔ a failure gets one of the six reasons of the failure page (0.8466ms)
+✔ only a missing file of the app's own says that the install is incomplete (0.5147ms)
+✔ the main process takes only its own acts, each in its own views (0.2106ms)
+✔ acts come only from the start page that was loaded (0.2165ms)
+✔ the snapshot carries the phase, the stages done and the clock (0.5293ms)
+✔ what the hint row can prepare for: a new team, a reinstall or an import (0.1701ms)
+✔ the copied details name the version and the reason before the log (0.0779ms)
+✔ the start window remembers the theme, the motion tier and the effects tier in its own file (4.5285ms)
+✔ every dialog belongs to a window (5.8365ms)
+✔ the start window takes acts only from its own page, each in its own view (1.6478ms)
+✔ the start window shows once its page says it has painted, see-through until OPEN_MS (0.5593ms)
+✔ a start page that never says it painted is shown anyway, opaque at once (0.2898ms)
+✔ a dialog of the start window shows it at once: it never opens over nothing (0.2447ms)
+✔ 〔保存日志…〕 writes the log where the app's picker says, and nothing when it is cancelled (7.6704ms)
+✔ a dialog of the start window turns it opaque while it waits see-through (0.3632ms)
+✔ the 180 s question comes on the start's clock while the engine is not up (0.5058ms)
+✔ the copy is a stage of its own, and the engine's stage waits for the copied team's engine (0.6062ms)
+✔ a failed copy keeps its arc on the ring until the start goes on without the team (0.2959ms)
+▶ a data folder that cannot be written fails at the data stage, a stopped engine at the engine
+  ✔ permission (0.2812ms)
+  ✔ space (0.2259ms)
+  ✔ engine (0.1636ms)
+✔ a data folder that cannot be written fails at the data stage, a stopped engine at the engine (1.0174ms)
+✔ a retry after the engine was up guards the new engine, while the whale keeps its stop (0.4061ms)
+✔ the team view has 20 s to call ready(); a late ready() hands over without a celebration (0.3217ms)
+✔ without handoffShow the team window shows by itself after 2500 ms on a first start (0.572ms)
+✔ without handoffShow the team window shows by itself after 800 ms on a later start (0.2498ms)
+✔ the whale the start page hands over is put in the team page's own coordinates (0.1801ms)
+✔ the team window waits see-through under the start window from ready() on (0.3356ms)
+✔ at handoffShow the team page gets the whale, and the windows cross-fade once it has drawn it (0.407ms)
+✔ when interface motion is off, the handoff reveals the team window at once with zero cross-fade ticks (0.2597ms)
+✔ the cross-fade starts anyway when the team page does not say it drew the whale (0.2502ms)
+✔ without a whale to hand over (a dive, or no box) the windows cross-fade at once (0.3926ms)
+✔ the team window comes up behind when the start window is (0.2784ms)
+✔ the team window comes up minimized when the start window is (0.1889ms)
+✔ closing the start window before the hand-off quits, and its timers go with it (0.1768ms)
+✔ the whale lands on the avatar the team view reported, in the start page's own coordinates (0.154ms)
+✔ ready() with the avatar's place puts the landing in the hand-off snapshot; without one there is none (0.5485ms)
+✔ the landing takes the start window's title bar into account, and waits with a held hand-off (0.2444ms)
+✔ a minimized start window gets no landing (0.1894ms)
+✔ a failure during the hand-off draws the failure page on a fresh page (0.2601ms)
+✔ a failure after the hand-off opens a fresh start window over the hidden team window (0.2338ms)
+✔ the place line, its picker and its cards, and a start over in another folder (0.515ms)
+✔ the hand-off waits while the picker is open (0.2267ms)
+✔ a card holds the hand-off the same way, and the ready is not lost when the card goes (0.1785ms)
+✔ a start over in another folder drops the old engine's held ready (0.1913ms)
+✔ a move from a later start turns the start window into the move's and drops the held hand-off (0.3772ms)
+✔ the failure page carries the update banner until a retry (0.3275ms)
+✔ a card shows only while the start boots or the data moves (0.2117ms)
+✔ the 20 s check's verdict waits for a card's answer instead of being lost (0.1962ms)
+▶ the tray
+  ✔ the icon carries the tooltip and a menu with Open and Quit (0.9298ms)
+  ✔ a click opens the window, and the menu opens and quits it (0.1552ms)
+  ✔ on macOS the menu of the icon is the way back, not a click (0.1054ms)
+  ✔ the icon goes away once (0.1078ms)
+✔ the tray (2.1144ms)
+▶ the update prompt
+  ✔ a prompt for a visible window is asked at once (0.8419ms)
+  ✔ a prompt for a hidden window waits, and is asked when the window is shown (0.1648ms)
+  ✔ a second showing does not ask again (0.1087ms)
+  ✔ a later answer of no does not install anything (0.1091ms)
+  ✔ a prompt that waits does nothing while the window is still hidden (0.0863ms)
+✔ the update prompt (2.1312ms)
+▶ isNewer
+  ✔ 0.1.8 compared with 0.1.7 (0.6727ms)
+  ✔ v0.2.0 compared with 0.1.9 (0.0908ms)
+  ✔ 0.1.7 compared with 0.1.7 (0.0638ms)
+  ✔ 0.1.6 compared with 0.1.7 (0.1051ms)
+  ✔ 0.2.0 compared with 0.2.0-rc.2 (0.1033ms)
+  ✔ 0.2.0-rc.2 compared with 0.2.0 (0.0625ms)
+  ✔ 0.2.0-rc.10 compared with 0.2.0-rc.2 (0.0809ms)
+  ✔ 0.1.10 compared with 0.1.9 (0.0563ms)
+  ✔ nightly compared with 0.1.7 (0.073ms)
+✔ isNewer (2.5891ms)
+▶ watchReleases
+  ✔ checks the latest release at once with the GitHub headers, or uses a given feed (1.443ms)
+  ✔ reports a newer release and opens its page only when accepted (10.7552ms)
+  ✔ ignores the same or an older release (0.6347ms)
+  ✔ asks once per version and asks again for a later version (30.8535ms)
+  ✔ reports releases without asking in throwaway runs (0.3392ms)
+  ✔ logs failed requests, invalid JSON, and non-HTTPS release pages without throwing (0.5314ms)
+  ✔ logs a non-array release response once (0.1426ms)
+  ✔ waits for the matching-architecture zip before asking (14.5718ms)
+  ✔ a given asset replaces the mac zip: the deb of a Linux install (0.4172ms)
+  ✔ ignores prereleases for a stable installation (0.1524ms)
+  ✔ includes prereleases when the installed version is a prerelease (0.134ms)
+  ✔ ignores draft releases (0.0962ms)
+  ✔ chooses the highest newer release with a matching zip (0.1231ms)
+  ✔ logs a rejected prompt without an unhandled rejection (30.67ms)
+  ✔ stop clears the interval (0.2536ms)
+  ✔ reports checking, then current when nothing is newer or available when one is (0.2996ms)
+  ✔ a failed check reports failed: HTTP error, bad JSON, non-array, thrown (0.3372ms)
+  ✔ check() runs the same check as the timer, but not while one is on (0.1528ms)
+  ✔ listeners hear every state change until they unsubscribe (14.5561ms)
+✔ watchReleases (107.3325ms)
+▶ watchUpdates
+  ✔ downloads in the background, installs at the quit, and checks at once (0.4472ms)
+  ✔ reads a given feed in place of the GitHub releases (0.128ms)
+  ✔ asks once per downloaded version, and on restart stops the Host before the installer runs (64.4ms)
+  ✔ leaves the update for the next quit when the user says later, or when it may not ask (63.7201ms)
+  ✔ logs a failed check and does not throw (1.0115ms)
+  ✔ tells what the newest check found and whether its download finished (0.8933ms)
+  ✔ a failed download, which electron-updater also reports as an error, is not left unhandled (29.4041ms)
+  ✔ installs on request: the Host stops first, then the installer runs and opens the app again (0.559ms)
+  ✔ checks again every few hours until stopped (0.2718ms)
+  ✔ follows the updater events: checking, current, downloading, downloaded (0.3121ms)
+  ✔ the download reports its per cent and MB, once per whole per cent (0.4085ms)
+  ✔ a failed check or download reports failed, unless an update is already downloaded (0.1547ms)
+  ✔ check() runs the timer's check, but not while checking, downloading or downloaded (0.1224ms)
+  ✔ listeners hear every state change until they unsubscribe (0.1071ms)
+✔ watchUpdates (162.5829ms)
+✔ Mica only on Windows 11 22H2 and later, the vibrancy on macOS (1.1171ms)
+✔ Windows and macOS draw the page under their window controls; Linux keeps its title bar (0.4866ms)
+✔ a minimized or hidden macOS window paints the fill until the vibrancy is back (0.2307ms)
+✔ only plain CSS colors reach the caption buttons (0.2909ms)
+✔ a theme id does not reach the native theme (0.1032ms)
+ℹ tests 497
+ℹ suites 32
+ℹ pass 493
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 4
+ℹ todo 0
+ℹ duration_ms 180487.3006

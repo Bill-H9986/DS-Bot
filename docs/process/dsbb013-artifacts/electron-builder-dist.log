@@ -1,0 +1,7 @@
+
+> dsbot-base@0.3.8 dist
+> node scripts/dist.mjs
+
+  • electron-builder  version=26.17.0 os=10.0.26300
+  • loaded configuration  file=C:\Users\24268\Desktop\Development\DS-Bot-Base\.claude\worktrees\fervent-darwin-188c56\app\electron-builder.yml
+DIST_EXIT=0

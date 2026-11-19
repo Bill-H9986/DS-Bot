@@ -273,7 +273,7 @@ export function startSnapshot(state, now) {
   return snapshot
 }
 
-export const detailsText = ({ version, platform, arch, reason, lines }) => [`DS Bot ${version} (${platform} ${arch})`, `reason: ${reason}`, '', ...lines].join('\n')
+export const detailsText = ({ version, platform, arch, reason, lines }) => [`DS Bot Base ${version} (${platform} ${arch})`, `reason: ${reason}`, '', ...lines].join('\n')
 
 const note = message => { console.log(`DS Bot: start window: ${message}`) }
 // The page sends a button's detail as { value }; anything else counts as none.
@@ -361,7 +361,7 @@ export class StartWindow {
     const win = new BrowserWindow({
       ...rect,
       useContentSize: true, resizable: false, maximizable: false, fullscreenable: false, minimizable: true,
-      show: false, title: 'DS Bot', icon: this.#o.icon,
+      show: false, title: 'DS Bot Base', icon: this.#o.icon,
       backgroundColor: material ? '#00000000' : colors.main,
       // Frameless with the system window controls over the page's empty 40 px band.
       ...frameOptions(process.platform, material, { color: material ? '#00000000' : colors.main, symbolColor: colors.ink }),

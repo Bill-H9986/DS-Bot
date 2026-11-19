@@ -1,0 +1,19 @@
+✔ win32: an installed copy keeps its own shell data and encryption identity (1.172ms)
+✔ darwin: an installed copy keeps its own shell data and encryption identity (0.1778ms)
+✔ linux: an installed copy keeps its own shell data and encryption identity (0.1196ms)
+✔ a fresh installation uses its own shell directory, not the old product’s (0.1916ms)
+✔ an old product’s installed copy is not adopted (0.1553ms)
+✔ an explicit shell directory never probes installed user data (0.1066ms)
+✔ an isolated data run never probes an installed application (0.0987ms)
+✔ old update clients receive the identical DS Bot payload: mac-arm64.zip (50.892ms)
+✔ old update clients receive the identical DS Bot payload: mac-x64.zip (54.218ms)
+✔ old update clients receive the identical DS Bot payload: linux-amd64.deb (46.7654ms)
+✔ the published installer identity is new and separated from the old product (8.0502ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 248.5906

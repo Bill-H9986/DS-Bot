@@ -1,6 +1,10 @@
-appId: io.github.fei2411.dsbot
-productName: DS Bot
-copyright: Copyright 2026 Fei2411 and the DS Bot contributors
+# DS Bot Base is a new, independent product. It carries its own appId and a brand-new, fixed
+# installer GUID, so it installs, upgrades and uninstalls on its own and coexists with the old
+# DS Bot: Windows never treats it as an in-place update of the old app, and the old app's
+# identity (appId io.github.fei2411.dsbot / its GUID) is left untouched.
+appId: io.github.fei2411.dsbotbase
+productName: DS Bot Base
+copyright: Copyright 2026 Fei2411 and the DS Bot Base contributors
 artifactName: DS-Bot-${version}-${os}-${arch}.${ext}
 directories:
   output: dist-pack
@@ -61,8 +65,9 @@ win:
       arch: [x64]
   icon: assets/icon.ico
 nsis:
-  # Preserve the GUID derived from the legacy appId so installed copies upgrade in place.
-  guid: 32c46dfc-ed78-5d41-85a4-a3c7f083f2e0
+  # A brand-new GUID, fixed in this file for the life of the product and never regenerated.
+  # It is deliberately not the old DS Bot's, so a new install does not upgrade the old one.
+  guid: cf83dddd-4347-491c-8c16-aede2ad61506
   oneClick: false
   perMachine: false
   allowElevation: false
@@ -84,7 +89,7 @@ mac:
   # Without this key macOS registers no Local Network entry for the app and
   # blocks LAN connections from tool processes outright ("No route to host").
   extendInfo:
-    NSLocalNetworkUsageDescription: DS Bot runs commands that connect to devices on your local network.
+    NSLocalNetworkUsageDescription: DS Bot Base runs commands that connect to devices on your local network.
 linux:
   # The Linux Host uses the payload's plain Node, which cannot read asar archives.
   asar: false
@@ -97,7 +102,7 @@ linux:
       arch: [x64]
   # The binary and the deb's menu entry take this name; productName has a space, which a
   # terminal command should not have.
-  executableName: dsbot
+  executableName: dsbot-base
   # A deb needs a maintainer; package.json's author has no email, so it goes here.
   maintainer: Fei2411 <https://github.com/Fei2411>
   # Links the running window to the menu entry (WM_CLASS = app id).

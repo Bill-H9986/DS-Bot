@@ -1,0 +1,24 @@
+✔ free space is read at the nearest existing ancestor of a folder that is not there yet (1.7824ms)
+✔ sizes read as Explorer shows them (0.1161ms)
+✔ the drive letter is read from a Windows path only (0.1057ms)
+✔ a path under the home folder is written with ~ (0.1779ms)
+✔ the place line names the drive and its free space, or the folder (0.3938ms)
+✔ a drive runs low at a fifth of the free space it had when the data went there (0.1193ms)
+✔ the picker opens in the data folder's parent (0.6033ms)
+✔ the current root is the parent of a data and a workspace folder that are siblings (0.9436ms)
+✔ an empty tree holds nothing but empty folders (1.7ms)
+✔ a new or empty folder is the root itself (2.0433ms)
+✔ a drive or a folder with other things in it gets a DS Bot layer (1.5164ms)
+✔ an empty root of the app's own is used again; someone else's layer is refused (3.6775ms)
+✔ the place the data is in now is no change, and a place inside it is refused (8.2922ms)
+✔ a folder that cannot be read counts as one without permission (0.2432ms)
+✔ OneDrive, the DSH home and the program folder are refused, through links too (4.6243ms)
+✔ the write probe makes only the missing layers and takes them away again (2.8146ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.1452

@@ -1,3 +1,6 @@
+// DS-Bot-Base's own product identity: its own appId, installer GUID and shell-data directory,
+// so it coexists with the old DS Bot. Its own Chromium encryption identity is kept stable
+// across in-place starts of its own install; the old product's directories are never adopted.
 import assert from 'node:assert/strict'
 import { EventEmitter } from 'node:events'
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
@@ -6,18 +9,22 @@ import { join } from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { test } from 'node:test'
 import { parse } from 'yaml'
-import { UUID } from 'builder-util-runtime'
-import { APP_ID, configureIdentity, LEGACY_ARTIFACT_PREFIX, LEGACY_PRODUCT_NAME } from '../src/legacy.mjs'
+import { APP_ID, configureIdentity, LEGACY_ARTIFACT_PREFIX, PRODUCT_NAME, SHELL_DATA_DIR } from '../src/legacy.mjs'
 
-function fixture({ saved = [], packaged = true } = {}) {
+// The old product's published identity, which this one must never reuse or upgrade.
+const OLD_APP_ID = 'io.github.fei2411.dsbot'
+const OLD_NSIIS_GUID = '32c46dfc-ed78-5d41-85a4-a3c7f083f2e0'
+// The installer GUID this product publishes, fixed for its life and never regenerated.
+const NSIIS_GUID = 'cf83dddd-4347-491c-8c16-aede2ad61506'
+
+function fixture({ saved = [] } = {}) {
   const app = new EventEmitter()
-  const appData = join(tmpdir(), 'dsbot-identity-fixture')
-  const current = join(appData, 'DS Bot')
-  const legacy = join(appData, LEGACY_PRODUCT_NAME)
+  const appData = join(tmpdir(), 'dsbot-base-identity-fixture')
+  const current = join(appData, SHELL_DATA_DIR)
+  const legacy = join(appData, 'DeepSeek Bot')
   const paths = { appData, userData: current }
   const names = []
   Object.assign(app, {
-    isPackaged: packaged,
     getPath: name => paths[name],
     setPath: (name, value) => { paths[name] = value },
     setName: name => names.push(name),
@@ -27,54 +34,65 @@ function fixture({ saved = [], packaged = true } = {}) {
   return { app, paths, names, current, legacy, exists }
 }
 
+// A start of an installed copy keeps its own shell data and, off Windows, its captured
+// encryption identity (pinned under the product name before ready, restored after).
 for (const platform of ['win32', 'darwin', 'linux']) {
-  test(`${platform}: an existing installation keeps its shell data and encryption identity`, () => {
+  test(`${platform}: an installed copy keeps its own shell data and encryption identity`, () => {
     const f = fixture()
+    const own = join(tmpdir(), 'dsbot-base-identity-fixture', SHELL_DATA_DIR)
     let created
-    const options = { env: {}, platform, mkdir: path => { created = path }, exists: path => path === f.legacy }
-    assert.deepEqual(configureIdentity(f.app, options), { userData: f.legacy, legacy: true })
-    assert.equal(f.paths.sessionData, f.legacy)
-    assert.equal(created, f.legacy)
+    const options = { env: {}, platform, mkdir: path => { created = path }, exists: path => path === own }
+    assert.deepEqual(configureIdentity(f.app, options), { userData: own, upgrade: true })
+    assert.equal(f.paths.sessionData, own)
+    assert.equal(created, own, 'its own directory is prepared, not anyone else’s')
     if (platform === 'win32') {
       assert.equal(f.app.id, APP_ID)
-      assert.deepEqual(f.names, [])
+      assert.deepEqual(f.names, [], 'Windows decrypts per user; no name capture')
     } else {
-      assert.deepEqual(f.names, [LEGACY_PRODUCT_NAME])
+      assert.deepEqual(f.names, [PRODUCT_NAME], 'the identity is pinned under the new name before ready')
       f.app.emit('ready')
-      assert.deepEqual(f.names, [LEGACY_PRODUCT_NAME, 'DS Bot'])
+      assert.deepEqual(f.names, [PRODUCT_NAME, PRODUCT_NAME], 'the visible name is restored after ready')
     }
   })
 }
 
-test('a fresh installation uses the new shell directory', () => {
+// A first install uses its own directory and touches no one else’s.
+test('a fresh installation uses its own shell directory, not the old product’s', () => {
   const f = fixture()
-  assert.deepEqual(configureIdentity(f.app, { env: {}, platform: 'linux', mkdir: () => {}, exists: f.exists }), { userData: f.current, legacy: false })
+  const own = join(tmpdir(), 'dsbot-base-identity-fixture', SHELL_DATA_DIR)
+  assert.deepEqual(configureIdentity(f.app, { env: {}, platform: 'linux', mkdir: () => {}, exists: path => path !== own }), { userData: own, upgrade: false })
   assert.deepEqual(f.names, [])
+  assert.notEqual(f.paths.userData, join(tmpdir(), 'dsbot-base-identity-fixture', 'DeepSeek Bot'))
 })
 
-test('an already configured new installation wins when both directories exist', () => {
+// An installed copy of the old DS Bot must not be adopted as this product’s active data:
+// this app never reads or reuses the old shell data or keychain identity.
+test('an old product’s installed copy is not adopted', () => {
   const f = fixture()
-  const existing = [f.legacy, join(f.current, 'locations.json')]
-  assert.equal(configureIdentity(f.app, { env: {}, mkdir: () => {}, exists: path => existing.includes(path) }).userData, f.current)
+  const own = join(tmpdir(), 'dsbot-base-identity-fixture', SHELL_DATA_DIR)
+  const legacy = join(tmpdir(), 'dsbot-base-identity-fixture', 'DeepSeek Bot')
+  const result = configureIdentity(f.app, { env: {}, platform: 'darwin', mkdir: () => {}, exists: path => path === legacy })
+  assert.equal(result.userData, own, 'its own directory, even when the old one exists')
+  assert.equal(result.upgrade, false, 'the old directory is not an upgrade of this product')
+  assert.deepEqual(f.names, [], 'the old product’s captured identity is not reused')
 })
 
+// An explicit shell directory is used as-is; nothing is probed.
 test('an explicit shell directory never probes installed user data', () => {
   const f = fixture()
-  const explicit = join(tmpdir(), 'dsbot-custom-shell')
+  const explicit = join(tmpdir(), 'dsbot-base-custom-shell')
   assert.equal(configureIdentity(f.app, { env: { DS_BOT_SHELL_DATA: explicit }, mkdir: () => {}, exists: () => { throw new Error('must not probe') } }).userData, explicit)
   assert.equal(f.paths.sessionData, explicit)
 })
 
+// A throwaway data root (development and tests) keeps the default shell directory and probes nothing.
 test('an isolated data run never probes an installed application', () => {
-  const f = fixture({ packaged: false })
-  assert.equal(configureIdentity(f.app, { env: { DS_BOT_HOME: '/tmp/dsbot-test-data' }, mkdir: () => {}, exists: () => { throw new Error('must not probe') } }).userData, f.current)
+  const f = fixture()
+  const own = join(tmpdir(), 'dsbot-base-identity-fixture', SHELL_DATA_DIR)
+  assert.equal(configureIdentity(f.app, { env: { DS_BOT_HOME: '/tmp/dsbot-base-test-data' }, mkdir: () => {}, exists: () => { throw new Error('must not probe') } }).userData, own)
 })
 
-test('a source installation also keeps its existing shell data', () => {
-  const f = fixture({ packaged: false })
-  assert.equal(configureIdentity(f.app, { env: {}, mkdir: () => {}, exists: path => path === f.legacy }).userData, f.legacy)
-})
-
+// The old-client release aliases stay intact: they carry the DeepSeek Bot era.
 for (const suffix of ['mac-arm64.zip', 'mac-x64.zip', 'linux-amd64.deb']) {
   test(`old update clients receive the identical DS Bot payload: ${suffix}`, () => {
     const root = mkdtempSync(join(tmpdir(), 'dsbot-release-alias-'))
@@ -91,10 +109,15 @@ for (const suffix of ['mac-arm64.zip', 'mac-x64.zip', 'linux-amd64.deb']) {
   })
 }
 
-
-test('renaming the Windows application preserves the published installer GUID', () => {
+// The installer identity is the new product's own, and is not the old product's.
+test('the published installer identity is new and separated from the old product', () => {
   const config = parse(readFileSync(new URL('../electron-builder.yml', import.meta.url), 'utf8'))
-  const published = UUID.v5('io.github.fei2411.deepseekbot', UUID.parse('50e065bc-3134-11e6-9bab-38c9862bdaf3'))
   assert.equal(config.appId, APP_ID)
-  assert.equal(config.nsis.guid, published)
+  assert.equal(config.nsis.guid, NSIIS_GUID)
+  assert.equal(config.productName, PRODUCT_NAME)
+  assert.notEqual(APP_ID, OLD_APP_ID, 'a new appId, not the old one')
+  assert.notEqual(config.nsis.guid, OLD_NSIIS_GUID, 'a new GUID, not the old one')
+  // The GUID is a fixed literal in the config, not a value derived from the appId, so a
+  // later appId change can never silently regenerate it.
+  assert.match(config.nsis.guid, /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$/iu)
 })

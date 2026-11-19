@@ -128,9 +128,9 @@ test('the main process takes only its own acts, each in its own views', () => {
 test('acts come only from the start page that was loaded', () => {
   // A Windows path is a file URL only on Windows.
   const win32 = process.platform === 'win32'
-  const page = win32 ? 'C:\\Program Files\\DS Bot\\resources\\app.asar\\src\\start\\start.html' : '/opt/DS Bot/resources/app.asar/src/start/start.html'
+  const page = win32 ? 'C:\\Program Files\\DS Bot Base\\resources\\app.asar\\src\\start\\start.html' : '/opt/DS Bot Base/resources/app.asar/src/start/start.html'
   const loaded = startUrl(page, 'first')
-  assert.equal(loaded, win32 ? 'file:///C:/Program%20Files/DS%20Bot/resources/app.asar/src/start/start.html?start=first' : 'file:///opt/DS%20Bot/resources/app.asar/src/start/start.html?start=first')
+  assert.equal(loaded, win32 ? 'file:///C:/Program%20Files/DS%20Bot%20Base/resources/app.asar/src/start/start.html?start=first' : 'file:///opt/DS%20Bot%20Base/resources/app.asar/src/start/start.html?start=first')
   assert.equal(isStartPage(loaded, loaded), true)
   assert.equal(isStartPage(`${loaded}#x`, loaded), false)
   assert.equal(isStartPage(loaded.replace('first', 'later'), loaded), false)
@@ -194,7 +194,7 @@ test('what the hint row can prepare for: a new team, a reinstall or an import', 
 })
 
 test('the copied details name the version and the reason before the log', () => {
-  assert.equal(detailsText({ version: '0.2.2', platform: 'win32', arch: 'x64', reason: 'engine', lines: ['l1', 'l2'] }), 'DS Bot 0.2.2 (win32 x64)\nreason: engine\n\nl1\nl2')
+  assert.equal(detailsText({ version: '0.2.2', platform: 'win32', arch: 'x64', reason: 'engine', lines: ['l1', 'l2'] }), 'DS Bot Base 0.2.2 (win32 x64)\nreason: engine\n\nl1\nl2')
 })
 
 test('the start window remembers the theme, the motion tier and the effects tier in its own file', (t) => {
@@ -396,7 +396,7 @@ test('〔保存日志…〕 writes the log where the app\'s picker says, and not
   s.act('saveLog')
   const saved = () => (readdirSync(dir).length > 0 ? readFileSync(join(dir, 'log.txt'), 'utf8') : '')
   for (let i = 0; i < 500 && !saved().includes('a log line'); i += 1) await new Promise(resolve => setImmediate(resolve))
-  assert.match(saved(), /^DS Bot 0\.0\.0 \([\s\S]*a log line/u)
+  assert.match(saved(), /^DS Bot Base 0\.0\.0 \([\s\S]*a log line/u)
 })
 
 test('a dialog of the start window turns it opaque while it waits see-through', (t) => {

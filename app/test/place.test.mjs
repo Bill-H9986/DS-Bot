@@ -157,18 +157,18 @@ test('the place the data is in now is no change, and a place inside it is refuse
   assert.equal(rootOf(join(current.workspace, 'sub'), { ...noProbe, current }).reason, 'nested')
   // The default places: picking the home puts the root on the workspace the start made.
   const home = join(dir, 'home')
-  mkdirSync(join(home, 'DS Bot'), { recursive: true })
+  mkdirSync(join(home, 'DS Bot Base'), { recursive: true })
   writeFileSync(join(home, 'other.txt'), '')
-  const defaults = { dataDir: join(home, '.ds-bot'), workspace: join(home, 'DS Bot') }
+  const defaults = { dataDir: join(home, '.ds-bot-base'), workspace: join(home, 'DS Bot Base') }
   const atHome = rootOf(home, { ...noProbe, current: defaults })
   assert.equal(atHome.reason, undefined)
-  assert.equal(atHome.root, join(home, 'DS Bot'))
+  assert.equal(atHome.root, join(home, 'DS Bot Base'))
   assert.equal(atHome.added, true)
-  assert.equal(rootOf(join(home, 'DS Bot'), { ...noProbe, current: defaults }).added, false)
+  assert.equal(rootOf(join(home, 'DS Bot Base'), { ...noProbe, current: defaults }).added, false)
   // Once the workspace holds files, the layer the home pick would add is a used folder.
-  writeFileSync(join(home, 'DS Bot', 'theirs.txt'), '')
+  writeFileSync(join(home, 'DS Bot Base', 'theirs.txt'), '')
   assert.equal(rootOf(home, { ...noProbe, current: defaults }).reason, 'foreign')
-  assert.equal(rootOf(join(home, 'DS Bot', 'sub'), { ...noProbe, current: defaults }).reason, 'nested')
+  assert.equal(rootOf(join(home, 'DS Bot Base', 'sub'), { ...noProbe, current: defaults }).reason, 'nested')
   assert.equal(rootOf(join(home, 'elsewhere'), { ...noProbe, current: defaults }).reason, undefined)
 })
 
