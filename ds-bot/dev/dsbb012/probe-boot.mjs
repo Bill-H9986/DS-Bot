@@ -2,8 +2,7 @@
 // report which public services are defined, and whether it can create + read a Session.
 // Imports the runtime through absolute paths into app/node_modules (the installed 0.2.2-rc.1).
 import { mkdirSync, writeFileSync } from 'node:fs'
-import { join, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 
 const APP = 'C:/Users/24268/Desktop/Development/DS-Bot-Base/.claude/worktrees/fervent-darwin-188c56/app'

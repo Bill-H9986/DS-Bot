@@ -35,7 +35,6 @@ const REPO = join(dirname(dirname(dirname(HERE))))
 // import() needs a file URL (a bare C:/... path is not a valid ESM specifier); the runtime
 // path arguments keep the plain form.
 const pkgImport = sub => pathToFileURL(join(REPO, 'app', 'node_modules', '@deepseek-ai', sub))
-const pkg = sub => join(REPO, 'app', 'node_modules', '@deepseek-ai', sub)
 
 process.env.DSH_HOME = home
 process.env.DEEPSEEK_BASE_URL = `http://127.0.0.1:${mockPort}/v1`

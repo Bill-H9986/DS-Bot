@@ -11,10 +11,10 @@
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import {
-  appendFileSync, createWriteStream, copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync,
+  createWriteStream, copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync,
 } from 'node:fs'
-import { dirname, join, resolve as resolvePath } from 'node:path'
-import { fileURLToPath, pathToFileURL } from 'node:url'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { zstdDecompressSync } from 'node:zlib'
 import { snapshotArtifact, prefixRelation, readAll } from './frames.mjs'
 
@@ -126,7 +126,6 @@ async function runStage(stage) {
 // Start the detached mock if the recorded port is not already answering. Safe to call
 // before every engine stage: a live mock is left untouched, a dead one is re-spawned.
 async function ensureMock(paths) {
-  const mockOut = join(ART, 'mock.out')
   const already = await probePort(paths.mockPort)
   if (already) return
   const mock = spawn(process.execPath, [join(REPO, 'ds-bot', 'dev', 'mock-llm.mjs'), DATA], {
@@ -207,11 +206,10 @@ async function setup() {
   const mockPort = await grabFreePort()
   writeFileSync(join(OLD_DIR, 'README.txt'), 'old team workspace fixture for DS-BB-012 (012-A)\n')
   writeFileSync(join(NEW_DIR, 'README.txt'), 'new team workspace fixture for DS-BB-012 (012-A)\n')
-  const paths = recordPaths({ mockPort })
+  recordPaths({ mockPort })
 
   // Start the existing mock LLM (bench-sanctioned; it never validates the key). Detached:
   // it outlives this setup process and is stopped by the finish stage.
-  const mockOut = join(ART, 'mock.out')
   const mock = spawn(process.execPath, [join(REPO, 'ds-bot', 'dev', 'mock-llm.mjs'), DATA], {
     cwd: join(REPO, 'ds-bot', 'dev'),
     env: { ...process.env, MOCK_PORT: String(mockPort), MOCK_LOG, MOCK_DELAY_MS: '150', MOCK_JITTER_MS: '0' },
